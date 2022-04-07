@@ -42,6 +42,7 @@
 		CB1252EF27FF0EB50060BCD7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CB1252ED27FF0DBE0060BCD7 /* Trip.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -49,6 +50,7 @@
 		CB1252F027FF0EBD0060BCD7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBA0552527FC33B600D25C95 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -56,6 +58,7 @@
 		CB1252F127FF0ECC0060BCD7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CBA0552327FC33B500D25C95 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -82,9 +85,6 @@
 				CBA0552827FC33B700D25C95 /* Assets.xcassets */,
 				CBA0552127FC33B500D25C95 /* SceneDelegate.swift */,
 				CBA0551F27FC33B500D25C95 /* AppDelegate.swift */,
-				CB1252ED27FF0DBE0060BCD7 /* Trip.swift */,
-				CBA0552527FC33B600D25C95 /* Main.storyboard */,
-				CBA0552327FC33B500D25C95 /* ViewController.swift */,
 				CB1252EF27FF0EB50060BCD7 /* Model */,
 				CB1252F027FF0EBD0060BCD7 /* View */,
 				CB1252F127FF0ECC0060BCD7 /* Controller */,
