@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func pressAddTrip(_ sender: Any) {
-        print("create ttrip")
+        print("putri cantik banget")
     }
 }
 
