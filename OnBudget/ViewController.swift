@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var openingLabel: UILabel!
+    @IBOutlet weak var mainBg: UIImageView!
     @IBOutlet weak var addTripBtn: UIButton!
     
     override func viewDidLoad() {
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func pressAddTrip(_ sender: Any) {
-        print("putri cantik banget")
+        print("added trip")
     }
 }
 
