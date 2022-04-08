@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,8 @@
                                     <color key="baseBackgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pressAddTrip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTw-U2-NVS"/>
+                                    <action selector="pressAddTrip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUs-u4-ZAw"/>
+                                    <segue destination="qJl-WO-BZn" kind="show" id="6lC-1x-WQV"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main-background" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-2D-9Qq">
@@ -52,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="-213"/>
+            <point key="canvasLocation" x="322" y="-263"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QKB-mo-9Eb">
@@ -71,7 +72,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrd-Pr-hfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.307692307692307" y="95.97156398104265"/>
+            <point key="canvasLocation" x="1079" y="-1044"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="YYa-ue-jam">
@@ -96,14 +97,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d74-WF-Asn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="477"/>
+            <point key="canvasLocation" x="1842" y="-263"/>
         </scene>
         <!--Add New Trip-->
         <scene sceneID="rBm-su-bPO">
             <objects>
                 <viewController storyboardIdentifier="AddTrip" id="ZXE-ne-JRn" customClass="AddTripViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WdO-w8-SSh">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-m0-dcU">
@@ -121,15 +122,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EE6-Qs-47D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716.9230769230769" y="107.34597156398104"/>
+            <point key="canvasLocation" x="320" y="1140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zpm-nT-9hn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJl-WO-BZn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0wM-oz-AKR">
-                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                    <navigationItem key="navigationItem" id="Hpm-lf-hTt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wM-oz-AKR">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -139,7 +141,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjs-JC-Aw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="107"/>
+            <point key="canvasLocation" x="321" y="443"/>
         </scene>
     </scenes>
     <resources>
