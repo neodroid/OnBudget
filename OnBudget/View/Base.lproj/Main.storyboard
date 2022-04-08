@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dashboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                             <constraint firstItem="iqM-lO-p8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="biH-pT-1Ps"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="l4V-Lr-9fm"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="l4V-Lr-9fm"/>
                     <connections>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
                         <outlet property="mainBg" destination="fuM-2D-9Qq" id="yHW-ku-FNw"/>
@@ -126,6 +126,7 @@
                                 <rect key="frame" x="30" y="102" width="256" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="2co-X6-2GB"/>
+                                    <constraint firstAttribute="height" constant="39" id="K0o-FZ-IiW"/>
                                     <constraint firstAttribute="width" constant="256" id="d5X-N4-5ic"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="yM9-Lp-dWF"/>
                                 </constraints>
@@ -140,8 +141,10 @@
                             <constraint firstItem="LQx-Cr-uPg" firstAttribute="trailing" secondItem="ENJ-Qh-VKJ" secondAttribute="trailing" constant="142" id="E0R-sy-YxK"/>
                             <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="leading" secondItem="LQx-Cr-uPg" secondAttribute="leading" constant="30" id="EvE-5N-3Z2"/>
                             <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="top" secondItem="LQx-Cr-uPg" secondAttribute="top" constant="58" id="gOn-ug-oZo"/>
+                            <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="top" secondItem="LQx-Cr-uPg" secondAttribute="top" constant="60" id="lnW-Kt-TlJ"/>
                             <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="leading" secondItem="LQx-Cr-uPg" secondAttribute="leading" constant="30" id="mbL-sa-DPa"/>
                             <constraint firstItem="LQx-Cr-uPg" firstAttribute="trailing" secondItem="ENJ-Qh-VKJ" secondAttribute="trailing" constant="142" id="oLe-ae-8mk"/>
+                            <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="top" secondItem="LQx-Cr-uPg" secondAttribute="top" constant="58" id="yD1-wD-4Dh"/>
                             <constraint firstItem="LQx-Cr-uPg" firstAttribute="bottom" secondItem="ENJ-Qh-VKJ" secondAttribute="bottom" constant="710" id="zav-ff-JS6"/>
                         </constraints>
                     </view>
@@ -149,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d74-WF-Asn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327" y="812"/>
+            <point key="canvasLocation" x="326.63551401869159" y="811.87904967602594"/>
         </scene>
         <!--Add New Trip-->
         <scene sceneID="rBm-su-bPO">
@@ -304,6 +307,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="main-background" width="577" height="502"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
