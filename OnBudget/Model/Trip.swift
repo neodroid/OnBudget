@@ -16,4 +16,6 @@ struct Trip {
     // start date
     // end date
     
+    //expenses[expense[]]
+    
 }

@@ -53,6 +53,49 @@
             </objects>
             <point key="canvasLocation" x="72.89719626168224" y="96.54427645788337"/>
         </scene>
+        <!--Add New Trip-->
+        <scene sceneID="rBm-su-bPO">
+            <objects>
+                <viewController storyboardIdentifier="AddTrip" id="ZXE-ne-JRn" customClass="AddTripViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WdO-w8-SSh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-m0-dcU">
+                                <rect key="frame" x="174" y="192" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JVe-ft-RAG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Trip" id="nMh-fY-jIP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EE6-Qs-47D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716.9230769230769" y="107.34597156398104"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zpm-nT-9hn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJl-WO-BZn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0wM-oz-AKR">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZXE-ne-JRn" kind="relationship" relationship="rootViewController" id="cTJ-7p-nFP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjs-JC-Aw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="107"/>
+        </scene>
     </scenes>
     <resources>
         <image name="main-background" width="577" height="502"/>
