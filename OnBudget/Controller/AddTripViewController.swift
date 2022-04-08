@@ -8,9 +8,16 @@
 import UIKit
 
 class AddTripViewController: UIViewController {
+    
+    var tripBrain = TripBrain()
 
+    @IBOutlet weak var titleField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleField.autocapitalizationType = .words
+        titleField.autocorrectionType = .no
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
@@ -29,6 +36,10 @@ class AddTripViewController: UIViewController {
         }
         vc.currTripStatus = true
         print(vc.currTripStatus)
+        
+        tripBrain.editName(tripName: titleField.text!)
+        print("trip name: \(tripBrain.name!)")
+        
     }
 
 }
