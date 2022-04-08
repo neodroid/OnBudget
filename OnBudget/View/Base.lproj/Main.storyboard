@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dashboard-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +20,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-lO-p8T">
                                 <rect key="frame" x="0.0" y="44" width="428" height="799"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background Layout" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-ga-0Om">
-                                        <rect key="frame" x="0.0" y="4" width="428" height="791"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Buddy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-dZ-C3A">
                                         <rect key="frame" x="30" y="58" width="152" height="39"/>
                                         <constraints>
@@ -65,6 +60,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="fuM-2D-9Qq" firstAttribute="leading" secondItem="iqM-lO-p8T" secondAttribute="leading" constant="78" id="30V-M2-TZ1"/>
                                     <constraint firstItem="FoY-dZ-C3A" firstAttribute="top" secondItem="iqM-lO-p8T" secondAttribute="topMargin" constant="50" id="6oJ-bx-WxW"/>
@@ -88,22 +84,16 @@
                             <constraint firstItem="iqM-lO-p8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="biH-pT-1Ps"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="l4V-Lr-9fm"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="l4V-Lr-9fm"/>
                     <connections>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
-                        <outlet property="dashboardBg" destination="Knh-ga-0Om" id="eIk-pc-sIU"/>
                         <outlet property="mainBg" destination="fuM-2D-9Qq" id="yHW-ku-FNw"/>
-                        <outlet property="mainView" destination="iqM-lO-p8T" id="Lye-fy-qdQ"/>
                         <outlet property="openingLabel" destination="FoY-dZ-C3A" id="FZ2-37-fUs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-
-            <point key="canvasLocation" x="-1567.2897196261681" y="811.87904967602594"/>
-
             <point key="canvasLocation" x="-268" y="812"/>
-
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QKB-mo-9Eb">
@@ -132,13 +122,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Qh-VKJ">
-                                <rect key="frame" x="30" y="102" width="256" height="38.333333333333343"/>
-
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Qh-VKJ">
                                 <rect key="frame" x="30" y="102" width="256" height="37"/>
-
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="2co-X6-2GB"/>
                                     <constraint firstAttribute="width" constant="256" id="d5X-N4-5ic"/>
@@ -157,6 +142,7 @@
                             <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="top" secondItem="LQx-Cr-uPg" secondAttribute="top" constant="58" id="gOn-ug-oZo"/>
                             <constraint firstItem="ENJ-Qh-VKJ" firstAttribute="leading" secondItem="LQx-Cr-uPg" secondAttribute="leading" constant="30" id="mbL-sa-DPa"/>
                             <constraint firstItem="LQx-Cr-uPg" firstAttribute="trailing" secondItem="ENJ-Qh-VKJ" secondAttribute="trailing" constant="142" id="oLe-ae-8mk"/>
+                            <constraint firstItem="LQx-Cr-uPg" firstAttribute="bottom" secondItem="ENJ-Qh-VKJ" secondAttribute="bottom" constant="710" id="zav-ff-JS6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="YfV-VW-Jwn"/>
@@ -172,6 +158,22 @@
                     <view key="view" contentMode="scaleToFill" id="WdO-w8-SSh">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-se-DRP">
+                                <rect key="frame" x="28" y="136" width="372" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="57k-nI-aWj">
+                                <rect key="frame" x="28" y="211" width="372" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JVe-ft-RAG"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -301,9 +303,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background Layout" width="390" height="844"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="main-background" width="577" height="502"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
