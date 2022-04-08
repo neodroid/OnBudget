@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="avH-sh-eZM">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -300,6 +300,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hh-QJ-97s" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-702" y="-731"/>
+        </scene>
+        <!--Splash Screen Controller-->
+        <scene sceneID="BxW-Td-TgR">
+            <objects>
+                <viewController id="avH-sh-eZM" customClass="SplashScreenController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="46i-Sl-Yrw">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0P-Ed-2OV">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OnBudget" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYd-uI-QeU">
+                                        <rect key="frame" x="32" y="88" width="364" height="55"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3LM-MO-Kah">
+                                        <rect key="frame" x="113.66666666666669" y="151" width="201" height="201"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="201" id="gSX-Rq-ugs"/>
+                                            <constraint firstAttribute="width" constant="201" id="y4e-dL-2aP"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="eYd-uI-QeU" firstAttribute="top" secondItem="a0P-Ed-2OV" secondAttribute="top" constant="88" id="0y3-x3-IwS"/>
+                                    <constraint firstItem="eYd-uI-QeU" firstAttribute="leading" secondItem="a0P-Ed-2OV" secondAttribute="leading" constant="32" id="Km1-iL-vSq"/>
+                                    <constraint firstItem="3LM-MO-Kah" firstAttribute="top" secondItem="eYd-uI-QeU" secondAttribute="bottom" constant="8" symbolic="YES" id="LEH-8X-dSX"/>
+                                    <constraint firstItem="eYd-uI-QeU" firstAttribute="centerX" secondItem="a0P-Ed-2OV" secondAttribute="centerX" id="trq-qQ-mm7"/>
+                                    <constraint firstItem="3LM-MO-Kah" firstAttribute="centerX" secondItem="a0P-Ed-2OV" secondAttribute="centerX" id="zuJ-dx-GZh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uqm-Os-2ZO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uqm-Os-2ZO" firstAttribute="bottom" secondItem="a0P-Ed-2OV" secondAttribute="bottom" id="Fl6-qZ-CM0"/>
+                            <constraint firstItem="a0P-Ed-2OV" firstAttribute="leading" secondItem="uqm-Os-2ZO" secondAttribute="leading" id="GeQ-47-WuJ"/>
+                            <constraint firstItem="uqm-Os-2ZO" firstAttribute="trailing" secondItem="a0P-Ed-2OV" secondAttribute="trailing" id="Lyr-w9-1fd"/>
+                            <constraint firstItem="a0P-Ed-2OV" firstAttribute="top" secondItem="uqm-Os-2ZO" secondAttribute="top" id="nrs-yv-QLb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="Tnx-Ei-n2H"/>
+                    <connections>
+                        <segue destination="8GK-Xe-wCL" kind="presentation" identifier="GoToLandingPage" modalPresentationStyle="fullScreen" id="TsI-d8-trj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYy-Kz-MnE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1433" y="-732"/>
         </scene>
     </scenes>
     <resources>
