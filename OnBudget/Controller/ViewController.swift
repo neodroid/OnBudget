@@ -21,10 +21,6 @@ class ViewController: UIViewController {
 
     @IBAction func pressAddTrip(_ sender: Any) {
         print("added trip")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "AddTrip") as? AddTripViewController else{
-            return
-        }
-        present(vc, animated: true)
     }
 }
 

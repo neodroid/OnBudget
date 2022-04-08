@@ -11,11 +11,37 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi, Buddy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-dZ-C3A">
+                                <rect key="frame" x="30" y="94" width="256" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.37647058823529411" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZW8-Hr-FFg">
+                                <rect key="frame" x="73" y="750" width="282" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add New Trip">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="baseBackgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressAddTrip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UUs-u4-ZAw"/>
+                                    <segue destination="qJl-WO-BZn" kind="show" id="6lC-1x-WQV"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="main-background" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-2D-9Qq">
+                                <rect key="frame" x="70" y="407" width="288" height="251"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-lO-p8T">
                                 <rect key="frame" x="0.0" y="44" width="428" height="799"/>
                                 <subviews>
@@ -62,6 +88,7 @@
                                     <constraint firstItem="ZW8-Hr-FFg" firstAttribute="centerX" secondItem="iqM-lO-p8T" secondAttribute="centerX" id="z6d-b2-vCS"/>
                                 </constraints>
                             </view>
+
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -81,7 +108,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+
+            
+              
+
             <point key="canvasLocation" x="650" y="-208"/>
+
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QKB-mo-9Eb">
@@ -100,7 +132,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vrd-Pr-hfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+
             <point key="canvasLocation" x="-722" y="800"/>
+
         </scene>
         <!--History View Controller-->
         <scene sceneID="YYa-ue-jam">
@@ -125,14 +159,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d74-WF-Asn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="477"/>
+            <point key="canvasLocation" x="1842" y="-263"/>
         </scene>
         <!--Add New Trip-->
         <scene sceneID="rBm-su-bPO">
             <objects>
                 <viewController storyboardIdentifier="AddTrip" id="ZXE-ne-JRn" customClass="AddTripViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WdO-w8-SSh">
+
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-m0-dcU">
@@ -150,15 +186,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EE6-Qs-47D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716.9230769230769" y="107.34597156398104"/>
+            <point key="canvasLocation" x="320" y="1140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zpm-nT-9hn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJl-WO-BZn" sceneMemberID="viewController">
                     <toolbarItems/>
+
+                    <navigationItem key="navigationItem" id="Hpm-lf-hTt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wM-oz-AKR">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="0wM-oz-AKR">
                         <rect key="frame" x="0.0" y="44" width="428" height="96"/>
+
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -168,6 +210,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjs-JC-Aw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+
+            <point key="canvasLocation" x="321" y="443"/>
+
             <point key="canvasLocation" x="178" y="800"/>
         </scene>
         <!--View Controller-->
@@ -244,6 +289,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hh-QJ-97s" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2453" y="-143"/>
+
         </scene>
     </scenes>
     <resources>
