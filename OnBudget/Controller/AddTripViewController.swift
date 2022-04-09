@@ -13,11 +13,14 @@ class AddTripViewController: UIViewController {
 
     @IBOutlet weak var titleField: UITextField!
     
+    @IBOutlet weak var destinationField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleField.autocapitalizationType = .words
         titleField.autocorrectionType = .no
+        destinationField.autocapitalizationType = .words
+        destinationField.autocorrectionType = .no
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
@@ -38,7 +41,10 @@ class AddTripViewController: UIViewController {
         print(vc.currTripStatus)
         
         tripBrain.editName(tripName: titleField.text!)
+        tripBrain.editDestination(tripDestination: destinationField.text!)
+        
         print("trip name: \(tripBrain.name!)")
+        print("trip destination: \(tripBrain.destination!)")
         
     }
 
