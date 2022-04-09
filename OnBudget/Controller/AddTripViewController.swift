@@ -7,13 +7,32 @@
 
 import UIKit
 
-class AddTripViewController: UIViewController {
+class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
     
     var tripBrain = TripBrain()
+    var duration = ["Starts on","Ends on"]
 
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var destinationField: UITextField!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("duration pressed")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return duration.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "durationCell", for: indexPath)
+        cell.textLabel?.text = duration[indexPath.row]
+        return cell
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +40,10 @@ class AddTripViewController: UIViewController {
         titleField.autocorrectionType = .no
         destinationField.autocapitalizationType = .words
         destinationField.autocorrectionType = .no
+        
+        
+        tableView.delegate = self
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
@@ -47,5 +70,8 @@ class AddTripViewController: UIViewController {
         print("trip destination: \(tripBrain.destination!)")
         
     }
-
+    
 }
+
+
+

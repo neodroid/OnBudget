@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mainBg: UIImageView!
     @IBOutlet weak var addTripBtn: UIButton!
     @IBOutlet weak var dashboardBg: UIImageView!
+
     
     public var currTripStatus : Bool = false
     
