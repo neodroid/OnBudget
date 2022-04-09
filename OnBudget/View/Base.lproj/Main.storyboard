@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-background" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-2D-9Qq">
-                                        <rect key="frame" x="78" y="368" width="288" height="251"/>
+                                        <rect key="frame" x="70" y="368" width="288" height="251"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="251" id="949-3M-X2T"/>
                                             <constraint firstAttribute="height" constant="251" id="DMU-VZ-Io5"/>
@@ -66,15 +66,16 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fuM-2D-9Qq" firstAttribute="leading" secondItem="iqM-lO-p8T" secondAttribute="leading" constant="78" id="30V-M2-TZ1"/>
+                                    <constraint firstItem="fuM-2D-9Qq" firstAttribute="leading" secondItem="iqM-lO-p8T" secondAttribute="leading" constant="70" id="30V-M2-TZ1"/>
                                     <constraint firstItem="FoY-dZ-C3A" firstAttribute="top" secondItem="iqM-lO-p8T" secondAttribute="topMargin" constant="50" id="6oJ-bx-WxW"/>
                                     <constraint firstItem="ZW8-Hr-FFg" firstAttribute="top" secondItem="fuM-2D-9Qq" secondAttribute="bottom" constant="88" id="C1a-7W-0fQ"/>
                                     <constraint firstItem="FoY-dZ-C3A" firstAttribute="leading" secondItem="iqM-lO-p8T" secondAttribute="leadingMargin" constant="22" id="KIs-u3-aIO"/>
                                     <constraint firstItem="FoY-dZ-C3A" firstAttribute="top" secondItem="iqM-lO-p8T" secondAttribute="topMargin" constant="50" id="NKl-98-mLZ"/>
                                     <constraint firstItem="fuM-2D-9Qq" firstAttribute="top" secondItem="FoY-dZ-C3A" secondAttribute="bottom" constant="271" id="UfB-qX-Hri"/>
-                                    <constraint firstAttribute="trailing" secondItem="fuM-2D-9Qq" secondAttribute="trailing" constant="62" id="XNT-XF-kmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="fuM-2D-9Qq" secondAttribute="trailing" constant="70" id="XNT-XF-kmo"/>
                                     <constraint firstItem="ZW8-Hr-FFg" firstAttribute="top" secondItem="fuM-2D-9Qq" secondAttribute="bottom" constant="88" id="rRr-ej-IPG"/>
                                     <constraint firstItem="ZW8-Hr-FFg" firstAttribute="centerX" secondItem="iqM-lO-p8T" secondAttribute="centerX" id="vLt-rD-x1v"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZW8-Hr-FFg" secondAttribute="bottom" constant="46" id="z2L-Cd-V7N"/>
                                     <constraint firstItem="fuM-2D-9Qq" firstAttribute="top" secondItem="FoY-dZ-C3A" secondAttribute="bottom" constant="271" id="zUY-d1-PAx"/>
                                 </constraints>
                             </view>
