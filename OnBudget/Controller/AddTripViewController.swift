@@ -8,7 +8,6 @@
 import UIKit
 
 class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-
     
     var tripBrain = TripBrain()
     var duration = ["Starts on","Ends on"]
@@ -18,23 +17,26 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var destinationField: UITextField!
     
 //    @IBOutlet weak var budgetField: UITextField!
-    
+
     @IBOutlet weak var tableView: UITableView!
+    
+//    @IBOutlet weak var datePicker: UIDatePicker!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("duration pressed")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+
         return duration.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "durationCell", for: indexPath)
         cell.textLabel?.text = duration[indexPath.row]
         return cell
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,8 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         titleField.autocorrectionType = .no
         destinationField.autocapitalizationType = .words
         destinationField.autocorrectionType = .no
+        
+//        datePicker.minimumDate = Date()
 //        budgetField.autocapitalizationType = .words
 //        budgetField.autocorrectionType = .no
         
@@ -78,6 +82,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
 }
+
 
 
 

@@ -232,7 +232,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="destinationField" destination="gnC-dS-E9l" id="zQm-me-0u4"/>
-                        <outlet property="tableView" destination="MLN-2d-4UQ" id="cxT-WF-uAW"/>
+                        <outlet property="tableView" destination="MLN-2d-4UQ" id="wHF-c5-cCJ"/>
                         <outlet property="titleField" destination="Y4E-kP-uBw" id="9FO-ck-r7R"/>
                     </connections>
                 </viewController>
