@@ -16,6 +16,7 @@
 		CBA0552727FC33B600D25C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA0552527FC33B600D25C95 /* Main.storyboard */; };
 		CBA0552927FC33B700D25C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA0552827FC33B700D25C95 /* Assets.xcassets */; };
 		CBA0552C27FC33B700D25C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA0552A27FC33B700D25C95 /* LaunchScreen.storyboard */; };
+		CBD835AE2800C2C600175A3D /* TripBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD835AD2800C2C600175A3D /* TripBrain.swift */; };
 		D338FDF628001D4500AEA9DA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDF528001D4500AEA9DA /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		CBA0552827FC33B700D25C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBA0552B27FC33B700D25C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBA0552D27FC33B700D25C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD835AD2800C2C600175A3D /* TripBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBrain.swift; sourceTree = "<group>"; };
 		D338FDF528001D4500AEA9DA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1252ED27FF0DBE0060BCD7 /* Trip.swift */,
+				CBD835AD2800C2C600175A3D /* TripBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD835AE2800C2C600175A3D /* TripBrain.swift in Sources */,
 				CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */,
 				CB1252EE27FF0DBE0060BCD7 /* Trip.swift in Sources */,
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
