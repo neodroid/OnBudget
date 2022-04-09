@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */; };
 		CB1252EE27FF0DBE0060BCD7 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252ED27FF0DBE0060BCD7 /* Trip.swift */; };
 		CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */; };
 		CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0551F27FC33B500D25C95 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
 		CB1252ED27FF0DBE0060BCD7 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		CBA0551C27FC33B500D25C95 /* OnBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 				CBA0552827FC33B700D25C95 /* Assets.xcassets */,
 				CBA0552127FC33B500D25C95 /* SceneDelegate.swift */,
 				CBA0551F27FC33B500D25C95 /* AppDelegate.swift */,
+				4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */,
 				CB1252EF27FF0EB50060BCD7 /* Model */,
 				CB1252F027FF0EBD0060BCD7 /* View */,
 				CB1252F127FF0ECC0060BCD7 /* Controller */,
@@ -179,6 +182,7 @@
 				CB1252EE27FF0DBE0060BCD7 /* Trip.swift in Sources */,
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
 				CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */,
+				4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */,
 				D338FDF628001D4500AEA9DA /* HistoryViewController.swift in Sources */,
 				CBA0552227FC33B500D25C95 /* SceneDelegate.swift in Sources */,
 			);
@@ -346,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -374,7 +378,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
