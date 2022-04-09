@@ -9,10 +9,11 @@ import Foundation
 
 struct TripBrain{
     
-    var currTripStatus : Bool = false
+    var currTripStatus : Bool = true
     
     var name: String?
     var destination: String?
+    //var budget: Int?
     
     mutating func editName(tripName: String) {
         self.name = tripName

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */; };
+		965978D92801DB7600A70E21 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965978D82801DB7600A70E21 /* DatePickerCell.swift */; };
 		CB1252EE27FF0DBE0060BCD7 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252ED27FF0DBE0060BCD7 /* Trip.swift */; };
 		CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */; };
 		CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0551F27FC33B500D25C95 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
+		965978D82801DB7600A70E21 /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		CB1252ED27FF0DBE0060BCD7 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		CBA0551C27FC33B500D25C95 /* OnBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 				CBA0552327FC33B500D25C95 /* ViewController.swift */,
 				D338FDF528001D4500AEA9DA /* HistoryViewController.swift */,
 				CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */,
+				965978D82801DB7600A70E21 /* DatePickerCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				CB1252EE27FF0DBE0060BCD7 /* Trip.swift in Sources */,
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
 				CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */,
+				965978D92801DB7600A70E21 /* DatePickerCell.swift in Sources */,
 				4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */,
 				D338FDF628001D4500AEA9DA /* HistoryViewController.swift in Sources */,
 				CBA0552227FC33B500D25C95 /* SceneDelegate.swift in Sources */,
