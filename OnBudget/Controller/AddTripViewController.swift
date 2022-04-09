@@ -17,6 +17,8 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var destinationField: UITextField!
     
+//    @IBOutlet weak var budgetField: UITextField!
+    
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -40,6 +42,9 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         titleField.autocorrectionType = .no
         destinationField.autocapitalizationType = .words
         destinationField.autocorrectionType = .no
+//        budgetField.autocapitalizationType = .words
+//        budgetField.autocorrectionType = .no
+        
         
         
         tableView.delegate = self
@@ -65,6 +70,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tripBrain.editName(tripName: titleField.text!)
         tripBrain.editDestination(tripDestination: destinationField.text!)
+        
         
         print("trip name: \(tripBrain.name!)")
         print("trip destination: \(tripBrain.destination!)")

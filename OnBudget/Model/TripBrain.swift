@@ -13,6 +13,7 @@ struct TripBrain{
     
     var name: String?
     var destination: String?
+    //var budget: Int?
     
     mutating func editName(tripName: String) {
         self.name = tripName
