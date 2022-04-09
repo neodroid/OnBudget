@@ -185,7 +185,7 @@
                                     <constraint firstAttribute="height" constant="87" id="7tM-bS-EjT"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="durationCell" id="shz-Bj-coy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="durationCell" id="shz-Bj-coy" customClass="durationCell" customModule="OnBudget" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="337" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="shz-Bj-coy" id="CIr-bz-tfo">
@@ -198,6 +198,9 @@
                                                 </datePicker>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="datePicker" destination="h6x-vr-h9i" id="KUM-82-de4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -232,7 +235,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="destinationField" destination="gnC-dS-E9l" id="zQm-me-0u4"/>
-                        <outlet property="tableView" destination="MLN-2d-4UQ" id="wHF-c5-cCJ"/>
+                        <outlet property="tableView" destination="MLN-2d-4UQ" id="M1d-HI-4rA"/>
                         <outlet property="titleField" destination="Y4E-kP-uBw" id="9FO-ck-r7R"/>
                     </connections>
                 </viewController>
