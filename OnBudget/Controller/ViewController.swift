@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        dashboardBg.isHidden = true
+        dashboardBg.isHidden = true
         
         // Check if currTripStatus true
         if currTripStatus{

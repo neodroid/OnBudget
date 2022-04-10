@@ -54,7 +54,6 @@
 			children = (
 				CB1252ED27FF0DBE0060BCD7 /* Trip.swift */,
 				CBD835AD2800C2C600175A3D /* TripBrain.swift */,
-				965978DA2801E59300A70E21 /* durationCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -70,6 +69,7 @@
 		CB1252F127FF0ECC0060BCD7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				965978DA2801E59300A70E21 /* durationCell.swift */,
 				CBA0552327FC33B500D25C95 /* ViewController.swift */,
 				D338FDF528001D4500AEA9DA /* HistoryViewController.swift */,
 				CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */,
