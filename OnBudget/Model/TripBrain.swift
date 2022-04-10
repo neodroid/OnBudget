@@ -9,12 +9,15 @@ import Foundation
 
 struct TripBrain{
     
-    var currTripStatus : Bool = true
-    
+    var currTripStatus : Bool = false
     var name: String?
     var destination: String?
-    //var budget: Int?
+    var budget: Double?
     
+//    var dateStart: Date?
+//    var dateEnd: Date?
+    
+    // function to edit the value
     mutating func editName(tripName: String) {
         self.name = tripName
 //        print(self.name!)
@@ -27,8 +30,17 @@ struct TripBrain{
         self.currTripStatus = tripStatus
 //        print(self.destination!)
     }
+    
+    mutating func editBudget(tripBudget: Double) {
+        self.budget = tripBudget
+    }
+    
+    
+    
+    //function for getting the value
     func getStatus() -> Bool {
         return currTripStatus
     }
+    
     
 }
