@@ -19,6 +19,8 @@
 		CBA0552C27FC33B700D25C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBA0552A27FC33B700D25C95 /* LaunchScreen.storyboard */; };
 		CBD835AE2800C2C600175A3D /* TripBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD835AD2800C2C600175A3D /* TripBrain.swift */; };
 		D338FDF628001D4500AEA9DA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDF528001D4500AEA9DA /* HistoryViewController.swift */; };
+		D338FDFE2803276100AEA9DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDFD2803276100AEA9DA /* ItemCell.swift */; };
+		D338FE002803288200AEA9DA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDFF2803288200AEA9DA /* History.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CBA0552D27FC33B700D25C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBD835AD2800C2C600175A3D /* TripBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBrain.swift; sourceTree = "<group>"; };
 		D338FDF528001D4500AEA9DA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D338FDFD2803276100AEA9DA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D338FDFF2803288200AEA9DA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			children = (
 				CBD835AD2800C2C600175A3D /* TripBrain.swift */,
 				CB292F7E2803212200039020 /* Expense.swift */,
+				D338FDFF2803288200AEA9DA /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -70,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				965978DA2801E59300A70E21 /* durationCell.swift */,
+				D338FDFD2803276100AEA9DA /* ItemCell.swift */,
 				CBA0552327FC33B500D25C95 /* ViewController.swift */,
 				D338FDF528001D4500AEA9DA /* HistoryViewController.swift */,
 				CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */,
@@ -183,7 +189,9 @@
 				CBD835AE2800C2C600175A3D /* TripBrain.swift in Sources */,
 				CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */,
 				965978DB2801E59300A70E21 /* durationCell.swift in Sources */,
+				D338FE002803288200AEA9DA /* History.swift in Sources */,
 				CB292F7F2803212200039020 /* Expense.swift in Sources */,
+				D338FDFE2803276100AEA9DA /* ItemCell.swift in Sources */,
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
 				CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */,
 				4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */,
