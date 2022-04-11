@@ -15,5 +15,4 @@ class ItemCell: UICollectionViewCell {
     @IBOutlet weak var expense: UILabel!
     @IBOutlet weak var budget: UILabel!
     
-    //@IBOutlet weak var backgroundView: UIImageView!
 }
