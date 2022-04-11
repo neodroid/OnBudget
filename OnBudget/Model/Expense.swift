@@ -15,7 +15,11 @@ struct Expense {
     var value: Double?
     var date: Date?
     
-    init(n: name, c: category, v: value){}
+    init(n: String, c: String, v: Double){
+        name = n
+        category = c
+        value = v
+    }
     
     
     //func to edit
