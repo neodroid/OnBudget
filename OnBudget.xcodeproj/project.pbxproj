@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */; };
+		961B356F28040D1A006B01DD /* CurrentTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961B356E28040D1A006B01DD /* CurrentTripViewController.swift */; };
 		965978DB2801E59300A70E21 /* durationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965978DA2801E59300A70E21 /* durationCell.swift */; };
 		CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */; };
 		CB292F7F2803212200039020 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB292F7E2803212200039020 /* Expense.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		4462E7B12800BCAD00CC9091 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
+		961B356E28040D1A006B01DD /* CurrentTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripViewController.swift; sourceTree = "<group>"; };
 		965978DA2801E59300A70E21 /* durationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = durationCell.swift; sourceTree = "<group>"; };
 		CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		CB292F7E2803212200039020 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				CBA0552327FC33B500D25C95 /* ViewController.swift */,
 				D338FDF528001D4500AEA9DA /* HistoryViewController.swift */,
 				CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */,
+				961B356E28040D1A006B01DD /* CurrentTripViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				CBD835AE2800C2C600175A3D /* TripBrain.swift in Sources */,
 				CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */,
 				965978DB2801E59300A70E21 /* durationCell.swift in Sources */,
+				961B356F28040D1A006B01DD /* CurrentTripViewController.swift in Sources */,
 				D338FE002803288200AEA9DA /* History.swift in Sources */,
 				CB292F7F2803212200039020 /* Expense.swift in Sources */,
 				D338FDFE2803276100AEA9DA /* ItemCell.swift in Sources */,

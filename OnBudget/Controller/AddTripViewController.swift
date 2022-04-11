@@ -11,6 +11,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var tripBrain = TripBrain()
     var duration = ["Starts on","Ends on"]
+
     
     @IBOutlet weak var titleField: UITextField!
     
@@ -19,6 +20,8 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
 //    @IBOutlet weak var budgetField: UITextField!
 
     @IBOutlet weak var tableView: UITableView!
+    
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("duration pressed")
@@ -34,6 +37,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.text = duration[indexPath.row]
         return cell
     }
+    
 
     
     override func viewDidLoad() {
@@ -41,6 +45,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         tableView.delegate = self
         tableView.dataSource = self
+
         
         titleField.autocapitalizationType = .words
         titleField.autocorrectionType = .no
