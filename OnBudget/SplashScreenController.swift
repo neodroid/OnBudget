@@ -16,9 +16,6 @@ class SplashScreenController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
             self.performSegue(withIdentifier: "GoToLandingPage", sender: nil)
         }
+        view.backgroundColor = UIColor(red: 0.20, green: 0.38, blue: 0.73, alpha: 1.00)
     }
-    
-
-
-
 }
