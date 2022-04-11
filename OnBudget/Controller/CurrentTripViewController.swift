@@ -11,7 +11,11 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     
     var expenses = ["nasi goreng", "hamburger", "go-car"]
     
-    @IBOutlet weak var destinationLabel: UILabel!
+    @IBOutlet weak var destinationTxt: UILabel!
+    @IBOutlet weak var totalTxt: UILabel!
+    @IBOutlet weak var total: UILabel!
+    @IBOutlet weak var remText: UILabel!
+    @IBOutlet weak var remaining: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -28,12 +32,38 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         cell.textLabel?.text = expenses[indexPath.row]
         return cell
     }
+    
+    func showDestination(){
+        
+    }
+    
+    func showTotalTxt() {
+        
+    }
+    
+    func showTotal(){
+        
+    }
+    
+    func showRemTxt(){
+        
+    }
+    
+    func showRem(){
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        showDestination()
+        showTotalTxt()
+        showTotal()
+        showRemTxt()
+        showRem()
  
     }
     
