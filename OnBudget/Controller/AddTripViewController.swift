@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AddTripViewControllerDelegate: AnyObject {
+    func updateMainView()
+}
+
 class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var tripBrain = TripBrain()
@@ -22,6 +26,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
+    weak var delegate: AddTripViewControllerDelegate?
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -38,7 +43,6 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.text = duration[indexPath.row]
         return cell
     }
-    
 
     
     override func viewDidLoad() {
@@ -62,6 +66,17 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
     
+    @IBAction func pressAdd(_ sender: Any) {
+        self.dismiss(animated: true) {
+            self.delegate?.updateMainView()
+        }
+        tripBrain.editName(tripName: titleField.text!)
+        tripBrain.editDestination(tripDestination: destinationField.text!)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.delegate?.updateMainView()
+    }
+    
     @objc func didTapCancel(){
         self.dismiss(animated: true, completion: nil)
         
@@ -69,20 +84,10 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
                                                             
     @objc func didTapAdd (){
-        self.dismiss(animated: true, completion: nil)
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "dashboard") as? ViewController else{
-            return
+        
+        self.dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name("updateViewMain"), object: nil, userInfo: nil)
         }
-        vc.currTripStatus = true
-        print(vc.currTripStatus)
-        
-        tripBrain.editName(tripName: titleField.text!)
-        tripBrain.editDestination(tripDestination: destinationField.text!)
-        
-        
-        print("trip name: \(tripBrain.name!)")
-        print("trip destination: \(tripBrain.destination!)")
-        
     }
     
 }

@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AddTripViewControllerDelegate {
+    func updateMainView() {
+        print("called")
+        
+    }
+    
 
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var openingLabel: UILabel!
@@ -23,7 +28,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         dashboardBg.isHidden = true
+        updateView()
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMain), name: Notification.Name("updateViewMain"), object: nil)
+    }
+    
+    @objc func updateMain() {
+        DispatchQueue.main.async {
+            self.currTripStatus = true
+            self.updateView()
+        }
+    }
+    
+    func updateView() {
         // Check if currTripStatus true
         if currTripStatus{
             mainBg.isHidden = true
@@ -32,6 +52,7 @@ class ViewController: UIViewController {
             dashboardBg.isHidden = false
         }
     }
+    
 
     func changeBgColor(){
         let gradient = CAGradientLayer()
@@ -44,10 +65,18 @@ class ViewController: UIViewController {
     
     @IBAction func pressAddTrip(_ sender: Any) {
         print("added trip")
-//        guard let vc = storyboard?.instantiateViewController(withIdentifier: "AddTrip") as? AddTripViewController else{
-//            return
-//        }
-//        present(vc, animated: true)
+//        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let addVC = segue.destination as? AddTripViewController
+            addVC?.delegate = self
+        }
+    }
+    
+    
+    
 }
 

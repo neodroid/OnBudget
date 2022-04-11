@@ -2,9 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,8 +26,17 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-L5-DVq">
+                                <rect key="frame" x="36" y="378" width="163" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Add Expenses">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </buttonConfiguration>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-NX-eBf">
-                                <rect key="frame" x="34" y="159" width="360" height="196"/>
+                                <rect key="frame" x="34" y="174" width="360" height="196"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination + Date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdY-Fc-f3b">
@@ -50,15 +58,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-L5-DVq">
-                                <rect key="frame" x="36" y="383" width="163" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Add Expenses">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                                    <color key="baseBackgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Bi-5p-lKJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,7 +111,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="pressAddTrip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FTw-U2-NVS"/>
-                                            <segue destination="qJl-WO-BZn" kind="show" id="M1Y-02-tFP"/>
+                                            <segue destination="qJl-WO-BZn" kind="show" identifier="toDetail" id="5ro-Jq-aRl"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main-background" translatesAutoresizingMaskIntoConstraints="NO" id="fuM-2D-9Qq">
@@ -452,20 +451,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" Title Expenses" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-uS-Qif">
-                                <rect key="frame" x="20" y="161" width="388" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" Title Expenses" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYh-uS-Qif">
+                                <rect key="frame" x="20" y="160" width="388" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="j6s-uT-HhV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Total Expense" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ANv-hN-WGp">
+                                <rect key="frame" x="20" y="393" width="388" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Mr8-aI-tG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amb-EE-YfX">
+                                <rect key="frame" x="20" y="335" width="388" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="s8p-5i-4c4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Category Transaction" titleAlignment="leading">
+                                    <imageReference key="image" image="chevron.right" catalog="system" symbolScale="default"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7K-kt-7SN">
+                                <rect key="frame" x="20" y="463" width="388" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="r9K-D8-ffl"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c92-qq-IVZ"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
+                            <constraint firstItem="c92-qq-IVZ" firstAttribute="trailing" secondItem="amb-EE-YfX" secondAttribute="trailing" constant="20" id="1fO-1W-RL9"/>
+                            <constraint firstItem="R7K-kt-7SN" firstAttribute="top" secondItem="ANv-hN-WGp" secondAttribute="bottom" constant="20" id="4FS-EZ-3wD"/>
+                            <constraint firstItem="amb-EE-YfX" firstAttribute="leading" secondItem="c92-qq-IVZ" secondAttribute="leading" constant="20" id="CTc-Dd-9qj"/>
+                            <constraint firstItem="c92-qq-IVZ" firstAttribute="bottom" secondItem="amb-EE-YfX" secondAttribute="bottom" constant="391" id="DSR-ae-lik"/>
                             <constraint firstItem="CYh-uS-Qif" firstAttribute="top" secondItem="c92-qq-IVZ" secondAttribute="top" constant="20" id="Eym-Uo-Pzd"/>
+                            <constraint firstItem="amb-EE-YfX" firstAttribute="trailing" secondItem="ANv-hN-WGp" secondAttribute="trailing" id="J0a-Hc-ASu"/>
+                            <constraint firstItem="R7K-kt-7SN" firstAttribute="leading" secondItem="c92-qq-IVZ" secondAttribute="leading" constant="20" id="KTB-no-CMb"/>
+                            <constraint firstItem="amb-EE-YfX" firstAttribute="top" secondItem="ANv-hN-WGp" secondAttribute="bottom" constant="8" symbolic="YES" id="KUs-fc-8Ix"/>
+                            <constraint firstItem="c92-qq-IVZ" firstAttribute="trailing" secondItem="R7K-kt-7SN" secondAttribute="trailing" constant="20" id="TEX-yW-XbR"/>
+                            <constraint firstItem="amb-EE-YfX" firstAttribute="leading" secondItem="ANv-hN-WGp" secondAttribute="leading" id="U4J-Jw-YLa"/>
                             <constraint firstItem="c92-qq-IVZ" firstAttribute="trailing" secondItem="CYh-uS-Qif" secondAttribute="trailing" constant="20" id="UKC-0A-Nj2"/>
+                            <constraint firstItem="amb-EE-YfX" firstAttribute="leading" secondItem="c92-qq-IVZ" secondAttribute="leading" constant="20" id="Yra-CC-VLB"/>
+                            <constraint firstItem="c92-qq-IVZ" firstAttribute="trailing" secondItem="amb-EE-YfX" secondAttribute="trailing" constant="20" id="p1a-dU-Zoc"/>
                             <constraint firstItem="CYh-uS-Qif" firstAttribute="leading" secondItem="c92-qq-IVZ" secondAttribute="leading" constant="20" id="w0d-XK-Jzl"/>
                         </constraints>
                     </view>
@@ -478,6 +516,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zpm-nT-9hn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qjs-JC-Aw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJl-WO-BZn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="aBk-kG-lpO"/>
@@ -490,7 +529,6 @@
                         <segue destination="ZXE-ne-JRn" kind="relationship" relationship="rootViewController" id="cTJ-7p-nFP"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qjs-JC-Aw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1567" y="1595"/>
         </scene>
@@ -573,6 +611,7 @@
         <image name="Card History Page" width="227" height="231"/>
         <image name="Logo OnBudget" width="173" height="173"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="main-background" width="577" height="502"/>
         <image name="plus" catalog="system" width="128" height="113"/>
@@ -582,6 +621,9 @@
         <namedColor name="blueBg">
             <color red="0.82700002193450928" green="0.875" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
