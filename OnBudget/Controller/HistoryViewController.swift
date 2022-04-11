@@ -29,15 +29,12 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCellID", for: indexPath) as? ItemCell)
         let trip = historyList.tripHistory[indexPath.row]
         
-        if trip.currTripStatus == false {
-            let selectedTrip = trip.self
-            cell?.title.text = "\(selectedTrip.name!) (\(selectedTrip.destination!))"
-            cell?.destination.text = selectedTrip.destination
-            cell?.expense.text = "Rp2.000.000"
-            cell?.budget.text = "dari Rp\(selectedTrip.budget!)"
-        }
+        cell?.title.text = "\(trip.name!) (\(trip.destination!))"
+        cell?.destination.text = trip.destination
+        cell?.expense.text = "Rp2.000.000"
+        cell?.budget.text = "dari Rp\(trip.budget!)"
         
-        cell?.backgroundColor = .lightGray
+        cell?.backgroundColor = UIColor(red: 0.83, green: 0.87, blue: 1.00, alpha: 1.00)
         
         return cell!
     }
