@@ -71,11 +71,11 @@
             <objects>
                 <viewController storyboardIdentifier="dashboard" id="BYZ-38-t0r" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iqM-lO-p8T">
-                                <rect key="frame" x="0.0" y="44" width="428" height="799"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="789"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background Layout" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-ga-0Om">
                                         <rect key="frame" x="0.0" y="4" width="428" height="791"/>
@@ -147,6 +147,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="l4V-Lr-9fm"/>
+                    <navigationItem key="navigationItem" id="YwD-n6-UzB"/>
                     <connections>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
                         <outlet property="dashboardBg" destination="Knh-ga-0Om" id="eIk-pc-sIU"/>
@@ -164,6 +165,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eui-Rl-MFm" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="amA-Ml-5ic"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0BG-8p-1Nl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -183,7 +185,7 @@
             <objects>
                 <viewController id="4mz-tV-C3x" customClass="HistoryViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KEv-8G-be5">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-Qh-VKJ">
@@ -366,6 +368,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJl-WO-BZn" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aBk-kG-lpO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0wM-oz-AKR">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -525,12 +528,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="Tnx-Ei-n2H"/>
                     <connections>
-                        <segue destination="8GK-Xe-wCL" kind="presentation" identifier="GoToLandingPage" modalPresentationStyle="fullScreen" id="TsI-d8-trj"/>
+                        <segue destination="eui-Rl-MFm" kind="show" identifier="GoToLandingPage" id="5Y8-G3-Lyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYy-Kz-MnE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1434.1121495327102" y="-732.1814254859612"/>
+            <point key="canvasLocation" x="-1396.2616822429907" y="-732.1814254859612"/>
         </scene>
     </scenes>
     <resources>
