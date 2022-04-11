@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="avH-sh-eZM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -387,107 +386,6 @@
             </objects>
             <point key="canvasLocation" x="-1567" y="1595"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="293-l5-MDK">
-            <objects>
-                <viewController id="8GK-Xe-wCL" customClass="ViewController" customModule="OnBudget" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JPa-M1-l2m">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfj-FU-RTD">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OnBudget" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLv-yq-I6r">
-                                        <rect key="frame" x="32" y="88" width="364" height="55"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
-                                        <color key="textColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo OnBudget" translatesAutoresizingMaskIntoConstraints="NO" id="5wy-Mf-gjh">
-                                        <rect key="frame" x="113.66666666666669" y="151" width="201" height="201"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="201" id="gVo-Fk-RL6"/>
-                                            <constraint firstAttribute="width" constant="201" id="s6e-YD-N4f"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to OnBudget" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-co-lQz">
-                                        <rect key="frame" x="97.666666666666686" y="360" width="233" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="52" id="0Sa-Zz-CHh"/>
-                                            <constraint firstAttribute="width" constant="233" id="kF4-kN-ult"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="We'll help note down your expenses to prevent you from over-budgeting on your trip!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whe-aa-inB">
-                                        <rect key="frame" x="94" y="408" width="240" height="87"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="87" id="G1M-C2-8ue"/>
-                                            <constraint firstAttribute="width" constant="240" id="eM7-l5-hbF"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your Name" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x0X-9p-v9v">
-                                        <rect key="frame" x="74.666666666666686" y="527" width="279" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="279" id="bAw-Oe-sWs"/>
-                                            <constraint firstAttribute="height" constant="46" id="fJz-Fh-GUi"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJu-dy-kCc">
-                                        <rect key="frame" x="156" y="616" width="117" height="56"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title="Next" imagePadding="3" buttonSize="large">
-                                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="large"/>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="6Mn-co-lQz" firstAttribute="centerX" secondItem="bfj-FU-RTD" secondAttribute="centerX" id="2Qk-WU-67o"/>
-                                    <constraint firstItem="5wy-Mf-gjh" firstAttribute="centerX" secondItem="bfj-FU-RTD" secondAttribute="centerX" id="5WM-aH-ZyN"/>
-                                    <constraint firstItem="5wy-Mf-gjh" firstAttribute="top" secondItem="PLv-yq-I6r" secondAttribute="bottom" constant="8" symbolic="YES" id="9TQ-cg-g0R"/>
-                                    <constraint firstItem="PLv-yq-I6r" firstAttribute="leading" secondItem="bfj-FU-RTD" secondAttribute="leading" constant="32" id="DWp-Fb-7jI"/>
-                                    <constraint firstItem="6Mn-co-lQz" firstAttribute="top" secondItem="5wy-Mf-gjh" secondAttribute="bottom" constant="8" symbolic="YES" id="Ido-gM-FFr"/>
-                                    <constraint firstItem="PLv-yq-I6r" firstAttribute="centerX" secondItem="bfj-FU-RTD" secondAttribute="centerX" id="KpZ-AC-wID"/>
-                                    <constraint firstItem="x0X-9p-v9v" firstAttribute="centerX" secondItem="bfj-FU-RTD" secondAttribute="centerX" id="bmo-Z2-eui"/>
-                                    <constraint firstItem="PLv-yq-I6r" firstAttribute="top" secondItem="bfj-FU-RTD" secondAttribute="top" constant="88" id="e9E-q2-7JS"/>
-                                    <constraint firstItem="x0X-9p-v9v" firstAttribute="top" secondItem="Whe-aa-inB" secondAttribute="bottom" constant="32" id="iho-df-PxL"/>
-                                    <constraint firstItem="Whe-aa-inB" firstAttribute="top" secondItem="5wy-Mf-gjh" secondAttribute="bottom" constant="56" id="mcQ-iT-UuJ"/>
-                                    <constraint firstItem="Whe-aa-inB" firstAttribute="centerX" secondItem="bfj-FU-RTD" secondAttribute="centerX" id="oY5-WF-OXi"/>
-                                    <constraint firstItem="x0X-9p-v9v" firstAttribute="centerX" secondItem="bfj-FU-RTD" secondAttribute="centerX" id="yFa-ia-2tx"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="K6e-Va-Iui"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="K6e-Va-Iui" firstAttribute="bottom" secondItem="bfj-FU-RTD" secondAttribute="bottom" id="DZ4-Ea-Y5m"/>
-                            <constraint firstItem="K6e-Va-Iui" firstAttribute="trailing" secondItem="bfj-FU-RTD" secondAttribute="trailing" id="E1v-F3-kqX"/>
-                            <constraint firstItem="bfj-FU-RTD" firstAttribute="top" secondItem="K6e-Va-Iui" secondAttribute="top" id="iC4-Kl-0XD"/>
-                            <constraint firstItem="bfj-FU-RTD" firstAttribute="leading" secondItem="K6e-Va-Iui" secondAttribute="leading" id="xZh-Wg-VcL"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="5kU-aF-0Bd"/>
-                    <connections>
-                        <outlet property="openingLabel" destination="PLv-yq-I6r" id="cJ2-GB-K9e"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2hh-QJ-97s" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-702.3364485981308" y="-731.5334773218143"/>
-        </scene>
         <!--Splash Screen Controller-->
         <scene sceneID="BxW-Td-TgR">
             <objects>
@@ -543,24 +441,14 @@
     </scenes>
     <resources>
         <image name="Background Layout" width="390" height="844"/>
-
+        <image name="Card History Page" width="227" height="231"/>
         <image name="Logo OnBudget" width="173" height="173"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="main-background" width="577" height="502"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-
-        <image name="Card History Page" width="227" height="231"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="main-background" width="577" height="502"/>
         <namedColor name="blueBg">
             <color red="0.82700002193450928" green="0.875" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="separatorColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -569,9 +457,6 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

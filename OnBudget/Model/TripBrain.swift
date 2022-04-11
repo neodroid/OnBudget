@@ -14,21 +14,19 @@ struct TripBrain{
     var destination: String?
     var budget: Double?
     
+    
 //    var dateStart: Date?
 //    var dateEnd: Date?
     
     // function to edit the value
     mutating func editName(tripName: String) {
         self.name = tripName
-//        print(self.name!)
     }
     mutating func editDestination(tripDestination: String) {
         self.destination = tripDestination
-//        print(self.destination!)
     }
     mutating func editStatus(tripStatus: Bool) {
         self.currTripStatus = tripStatus
-//        print(self.destination!)
     }
     
     mutating func editBudget(tripBudget: Double) {
@@ -41,6 +39,9 @@ struct TripBrain{
     func getStatus() -> Bool {
         return currTripStatus
     }
+//    func getExpenses() -> Bool {
+//        return currTripStatus
+//    }
     
     
 }

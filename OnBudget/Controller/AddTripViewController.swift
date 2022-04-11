@@ -10,6 +10,7 @@ import UIKit
 class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var tripBrain = TripBrain()
+    var expensesBrain = ExpensesBrain()
     var duration = ["Starts on","Ends on"]
     
     @IBOutlet weak var titleField: UITextField!
@@ -58,6 +59,8 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func didTapCancel(){
         self.dismiss(animated: true, completion: nil)
+        
+        print(expensesBrain.expenses[1].name!)
     }
                                                             
     @objc func didTapAdd (){
