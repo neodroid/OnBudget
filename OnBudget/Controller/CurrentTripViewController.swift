@@ -9,7 +9,7 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var expenses = ["nasi goreng, hamburger, go-car"]
+    var expenses = ["nasi goreng", "hamburger", "go-car"]
     
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
