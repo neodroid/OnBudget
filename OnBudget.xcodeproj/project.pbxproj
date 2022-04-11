@@ -11,6 +11,7 @@
 		965978DB2801E59300A70E21 /* durationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965978DA2801E59300A70E21 /* durationCell.swift */; };
 		CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */; };
 		CB292F7F2803212200039020 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB292F7E2803212200039020 /* Expense.swift */; };
+		CB292F832804181500039020 /* ExpensesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB292F822804181500039020 /* ExpensesBrain.swift */; };
 		CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0551F27FC33B500D25C95 /* AppDelegate.swift */; };
 		CBA0552227FC33B500D25C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0552127FC33B500D25C95 /* SceneDelegate.swift */; };
 		CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA0552327FC33B500D25C95 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		965978DA2801E59300A70E21 /* durationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = durationCell.swift; sourceTree = "<group>"; };
 		CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		CB292F7E2803212200039020 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		CB292F822804181500039020 /* ExpensesBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesBrain.swift; sourceTree = "<group>"; };
 		CBA0551C27FC33B500D25C95 /* OnBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0551F27FC33B500D25C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBA0552127FC33B500D25C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				CBD835AD2800C2C600175A3D /* TripBrain.swift */,
 				CB292F7E2803212200039020 /* Expense.swift */,
 				D338FDFF2803288200AEA9DA /* History.swift */,
+				CB292F822804181500039020 /* ExpensesBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
 				CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */,
 				4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */,
+				CB292F832804181500039020 /* ExpensesBrain.swift in Sources */,
 				D338FDF628001D4500AEA9DA /* HistoryViewController.swift in Sources */,
 				CBA0552227FC33B500D25C95 /* SceneDelegate.swift in Sources */,
 			);

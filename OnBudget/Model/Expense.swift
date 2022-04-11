@@ -15,6 +15,8 @@ struct Expense {
     var value: Double?
     var date: Date?
     
+    init(n: name, c: category, v: value){}
+    
     
     //func to edit
     mutating func editName(expenseName: String) {
