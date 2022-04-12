@@ -18,7 +18,9 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     @IBOutlet weak var mainBg: UIImageView!
     @IBOutlet weak var addTripBtn: UIButton!
     @IBOutlet weak var dashboardBg: UIImageView!
-
+    @IBOutlet weak var currentTripDashboard: UIView!
+    @IBOutlet weak var addExpensesBtn: UIButton!
+    
     
     public var currTripStatus : Bool = false
     
@@ -27,6 +29,8 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         // Do any additional setup after loading the view.
         
         dashboardBg.isHidden = true
+        currentTripDashboard.isHidden = true
+        addExpensesBtn.isHidden = true
         updateView()
         
     }
@@ -49,6 +53,8 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             addTripBtn.isHidden = true
             //changeBgColor()
             dashboardBg.isHidden = false
+            currentTripDashboard.isHidden = false
+            addExpensesBtn.isHidden = false
         }
     }
     
