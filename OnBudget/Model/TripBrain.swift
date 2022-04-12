@@ -15,8 +15,8 @@ struct TripBrain{
     var budget: Double?
     
     
-//    var dateStart: Date?
-//    var dateEnd: Date?
+    var dateStart: String?
+    var dateEnd: String?
     
     // function to edit the value
     mutating func editName(tripName: String) {

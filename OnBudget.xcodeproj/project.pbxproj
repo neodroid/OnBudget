@@ -12,6 +12,7 @@
 		9642A28E28048715006BEFC4 /* AddExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642A28D28048715006BEFC4 /* AddExpenseCell.swift */; };
 		9642A29028048765006BEFC4 /* AddExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642A28F28048765006BEFC4 /* AddExpensesViewController.swift */; };
 		965978DB2801E59300A70E21 /* durationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965978DA2801E59300A70E21 /* durationCell.swift */; };
+		96C06C272805666B00C0C639 /* DailyExpensesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C06C262805666B00C0C639 /* DailyExpensesCell.swift */; };
 		CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */; };
 		CB292F7F2803212200039020 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB292F7E2803212200039020 /* Expense.swift */; };
 		CB292F8128040B7C00039020 /* ExpensesBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB292F8028040B7C00039020 /* ExpensesBrain.swift */; };
@@ -34,6 +35,7 @@
 		9642A28D28048715006BEFC4 /* AddExpenseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseCell.swift; sourceTree = "<group>"; };
 		9642A28F28048765006BEFC4 /* AddExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpensesViewController.swift; sourceTree = "<group>"; };
 		965978DA2801E59300A70E21 /* durationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = durationCell.swift; sourceTree = "<group>"; };
+		96C06C262805666B00C0C639 /* DailyExpensesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyExpensesCell.swift; sourceTree = "<group>"; };
 		CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		CB292F7E2803212200039020 /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		CB292F8028040B7C00039020 /* ExpensesBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesBrain.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				961B356E28040D1A006B01DD /* CurrentTripViewController.swift */,
 				9642A28F28048765006BEFC4 /* AddExpensesViewController.swift */,
 				D338FE012805458200AEA9DA /* CategoryViewController.swift */,
+				96C06C262805666B00C0C639 /* DailyExpensesCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				CB292F7F2803212200039020 /* Expense.swift in Sources */,
 				9642A29028048765006BEFC4 /* AddExpensesViewController.swift in Sources */,
 				D338FDFE2803276100AEA9DA /* ItemCell.swift in Sources */,
+				96C06C272805666B00C0C639 /* DailyExpensesCell.swift in Sources */,
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
 				CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */,
 				4462E7B22800BCAD00CC9091 /* SplashScreenController.swift in Sources */,
