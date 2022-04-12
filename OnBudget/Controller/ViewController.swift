@@ -76,6 +76,10 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
 //        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
     
+//    @IBAction func pressAddExpense(_ sender: Any) {
+//        
+//    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
