@@ -7,6 +7,8 @@
 
 import UIKit
 
+var pickCategory: String?
+
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var cat = ["🍔 Foods & Drinks", "🚕 Transportation", "🏠 Hotel", "💳 Top up", "🎳 Activity ", "🔍 Others" ]
@@ -19,13 +21,15 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapAdd))
+        navigationItem.title = "Category Transaction"
         navigationItem.largeTitleDisplayMode = .never
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDone))
     }
 
-    @objc func didTapAdd(){
-    
+    @objc func didTapDone(){
         
+        print(pickCategory!)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +41,11 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         cell.categoryLabel.text = cat[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let position = indexPath.row
+        pickCategory = cat[position]
     }
 
     /*

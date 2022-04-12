@@ -95,17 +95,11 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         self.present(addExpenseVC, animated: true, completion: nil)
     }
     
-    @IBAction func selectTrip(_ sender: Any) {
-        
-    }
-    
     @IBAction func pressAddTrip(_ sender: Any) {
         print("added trip")
         print(tripData.currentTrip.count)
 //        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
-    
-
     
     @IBAction func selectedTrip(_ sender: Any) {
         print("centsu ganteng")
