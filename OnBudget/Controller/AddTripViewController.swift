@@ -82,6 +82,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
                                                             
     @objc func didTapAdd (){
+
         
         if checkInput() {
             self.dismiss(animated: true) {
@@ -95,6 +96,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(tripBrain.getBudget())
             print(tripBrain.name!)
             print(tripBrain.destination!)
+
         }
 
     }
