@@ -57,8 +57,10 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     func updateView() {
         // Check if currTripStatus true
         
-        if let nameTrip = tripData.currentTrip[0].destination {
-            tripTitle.text = nameTrip
+
+        if let destinationTrip = tripData.currentTrip[0].destination{
+            tripTitle.text = "\(destinationTrip)"
+
         }
         if let budgetTrip = tripData.currentTrip[0].budget {
             
@@ -91,17 +93,11 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         self.present(addExpenseVC, animated: true, completion: nil)
     }
     
-    @IBAction func selectTrip(_ sender: Any) {
-        
-    }
-    
     @IBAction func pressAddTrip(_ sender: Any) {
         print("added trip")
         print(tripData.currentTrip.count)
 //        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
-    
-
     
     @IBAction func selectedTrip(_ sender: Any) {
         print("centsu ganteng")

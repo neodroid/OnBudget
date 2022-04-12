@@ -24,7 +24,9 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return tripData.expenses.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,6 +73,13 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
+
+        let addButton   = UIBarButtonItem(image: UIImage(systemName: "plus"),  style: .plain, target: self, action: #selector(didTapAdd))
+        let moreButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),  style: .plain, target: self, action: #selector(didTapMore))
+        
+        navigationItem.rightBarButtonItems = [moreButton, addButton]
+        
+        
         showDestination()
         showTotalTxt()
         showTotal()
@@ -79,6 +88,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
  
     }
     
+
     func formatDoubleToString(double: Double) -> String{
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -90,5 +100,20 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         return("Rp. \(myFormattedDouble!)")
     }
     
+
+    @objc func didTapAdd(){
+        let addExpenseVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddExpensesViewController")
+        if let sheet = addExpenseVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        self.present(addExpenseVC, animated: true, completion: nil)
+    }
+    
+    @objc func didTapMore(){
+        //d
+    }
+
 
 }

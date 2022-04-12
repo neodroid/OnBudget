@@ -10,7 +10,6 @@ import UIKit
 class AddExpensesViewController: UIViewController {
 
     // IBOutlet
-    
     @IBOutlet weak var category: UIButton!
     @IBOutlet weak var titleExpense: UITextField!
     @IBOutlet weak var totalExpense: UITextField!
@@ -22,6 +21,12 @@ class AddExpensesViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = "Add Expense"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(didTapClose))
+        //category.titleLabel = pickCategory
+    }
+    
+    @objc func didTapClose(){
+        dismiss(animated: true)
     }
 
     @IBAction func selectCategory(_ sender: Any) {
