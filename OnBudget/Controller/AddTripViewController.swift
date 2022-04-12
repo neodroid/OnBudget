@@ -11,14 +11,12 @@ protocol AddTripViewControllerDelegate: AnyObject {
     func updateMainView()
 }
 
-class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, durationCellProtocol{
     
     var tripBrain = TripBrain()
     var expensesBrain = ExpensesBrain()
     var duration = ["Starts on","Ends on"]
 
-    
-    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var titleField: UITextField!
     
     @IBOutlet weak var destinationField: UITextField!
@@ -28,27 +26,6 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     weak var delegate: AddTripViewControllerDelegate?
-
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print("duration pressed")
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return duration.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "durationCell", for: indexPath)
-        cell.textLabel?.text = duration[indexPath.row]
-        
-        
-        
-        return cell
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +73,8 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(tripBrain.getBudget())
             print(tripBrain.name!)
             print(tripBrain.destination!)
+            print("your trip \(duration[0])")
+            print("your trip \(duration[1]) \(durationCell().dateSelect((Any).self))")
 
         }
 
@@ -134,7 +113,25 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return duration.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "durationCell", for: indexPath) as? durationCell)!
+        cell.textLabel?.text = duration[indexPath.row]
+        cell.currentIndex = indexPath.row
+        cell.delegate = self
+        return cell
+    }
     
+    func updateTableSelected(index: Int, dateSelected: String) {
+        if index == 0 {
+            print("date start clicked at : \(dateSelected)")
+        } else {
+            print("date end clicked : \(dateSelected)")
+        }
+    }
     
     
 }

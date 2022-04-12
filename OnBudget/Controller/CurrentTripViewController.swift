@@ -9,7 +9,7 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var expenses = ["nasi goreng", "hamburger", "go-car"]
+    var expenses = [300]
     
     @IBOutlet weak var destinationTxt: UILabel!
     @IBOutlet weak var totalTxt: UILabel!
@@ -29,8 +29,10 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath)
-        cell.textLabel?.text = expenses[indexPath.row]
+        let cell = (tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? DailyExpensesCell)!
+//        cell.textLabel?.text = expenses[indexPath.row]
+        cell.expenseName.text = "Nasi Goreng Kebuli"
+        cell.expenseAmount.text = "2000000"
         return cell
     }
     
