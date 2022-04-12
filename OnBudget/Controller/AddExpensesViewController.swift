@@ -12,11 +12,16 @@ class AddExpensesViewController: UIViewController {
     // IBOutlet
     
     @IBOutlet weak var category: UIButton!
+    @IBOutlet weak var titleExpense: UITextField!
+    @IBOutlet weak var totalExpense: UITextField!
+    @IBOutlet weak var dateExpense: UIDatePicker!
+    
+    var expensesBrain = ExpensesBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationItem.title = "Add Expense"
     }
 
     @IBAction func selectCategory(_ sender: Any) {
@@ -25,4 +30,25 @@ class AddExpensesViewController: UIViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func addButtonClicked(_ sender: Any) {
+        
+        let datestyle = DateFormatter()
+
+        datestyle.timeZone = TimeZone(abbreviation: "GMT+7")
+        datestyle.locale = NSLocale.current
+        datestyle.dateFormat = "dd-MMM-yyyy"
+
+        let date = datestyle.string(from: dateExpense.date)
+        
+        print(titleExpense.text!)
+        let expenseNum = Double(totalExpense.text!)
+        print(date)
+        
+        expensesBrain.addExpense(name: titleExpense.text!, category: date, value: expenseNum!)
+        
+        print(expensesBrain.expenses)
+        
+    }
+    
 }
