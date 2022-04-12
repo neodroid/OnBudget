@@ -39,9 +39,9 @@ struct TripBrain{
     func getStatus() -> Bool {
         return currTripStatus
     }
-//    func getExpenses() -> Bool {
-//        return currTripStatus
-//    }
+    func getBudget() -> Double {
+        return budget!
+    }
     
     
 }
