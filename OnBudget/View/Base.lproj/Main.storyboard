@@ -27,60 +27,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgO-gv-lHH">
-                                        <rect key="frame" x="21" y="105" width="385" height="203"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card Trip Page" translatesAutoresizingMaskIntoConstraints="NO" id="SFl-QU-eqA">
-                                                <rect key="frame" x="-122" y="-53" width="626" height="331"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="17 - 20 Sept 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLo-vG-dxO">
-                                                <rect key="frame" x="45" y="48" width="137" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rp 5.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cr-QL-AjY">
-                                                <rect key="frame" x="45" y="81" width="215" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Remaining Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnA-G6-bKQ">
-                                                <rect key="frame" x="45" y="141" width="139" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qqP-0Q-h6P">
-                                                <rect key="frame" x="45" y="172" width="297" height="4"/>
-                                                <color key="progressTintColor" systemColor="systemBackgroundColor"/>
-                                                <color key="trackTintColor" systemColor="secondaryLabelColor"/>
-                                            </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="BANDUNG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWj-wb-dRX">
-                                                <rect key="frame" x="45" y="20" width="125" height="30"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="JWj-wb-dRX" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="45" id="ACr-ij-F5D"/>
-                                            <constraint firstItem="JWj-wb-dRX" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="30" id="Dkb-uf-Se0"/>
-                                            <constraint firstItem="qqP-0Q-h6P" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="30" id="FTq-Se-YbL"/>
-                                            <constraint firstItem="JWj-wb-dRX" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="27" id="Krb-T5-55v"/>
-                                            <constraint firstItem="DLo-vG-dxO" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="30" id="PPe-XV-s8N"/>
-                                            <constraint firstItem="DnA-G6-bKQ" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="30" id="XxI-t9-Czm"/>
-                                            <constraint firstItem="JWj-wb-dRX" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="24" id="Ylt-zk-kdT"/>
-                                            <constraint firstItem="JWj-wb-dRX" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="30" id="avO-aj-8xX"/>
-                                            <constraint firstItem="DLo-vG-dxO" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="50" id="h3V-ka-08B"/>
-                                            <constraint firstItem="0cr-QL-AjY" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="24" id="jni-vX-mU9"/>
-                                            <constraint firstItem="0cr-QL-AjY" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="30" id="q2d-Lu-1lP"/>
-                                            <constraint firstItem="JWj-wb-dRX" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="45" id="teV-dx-9Us"/>
-                                            <constraint firstItem="DLo-vG-dxO" firstAttribute="leading" secondItem="JgO-gv-lHH" secondAttribute="leading" constant="45" id="vly-Zx-FV0"/>
-                                        </constraints>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Buddy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-dZ-C3A">
                                         <rect key="frame" x="30" y="58" width="152" height="39"/>
                                         <constraints>
@@ -121,21 +67,17 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-L5-DVq">
-                                        <rect key="frame" x="30" y="322" width="185" height="47"/>
+                                        <rect key="frame" x="30" y="330" width="185" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="plus.square.fill" catalog="system" title="Add Expenses">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="addExpenses:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCk-0V-pmv"/>
-                                            <action selector="pressAddExpense:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swB-xQ-PQX"/>
-                                        </connections>
                                     </button>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-de-8Tw">
+                                    <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-de-8Tw">
                                         <rect key="frame" x="0.0" y="380" width="428" height="224"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Vy8-Zx-ixo">
                                                 <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
@@ -163,6 +105,51 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-R4-vYs">
+                                        <rect key="frame" x="0.0" y="105" width="428" height="229"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card Trip Page" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-FJ-w2d">
+                                                <rect key="frame" x="-76" y="-51" width="580" height="344"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BANDUNG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxL-mJ-n0g">
+                                                <rect key="frame" x="66" y="29" width="125" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="17 - 22 Sept 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-sY-iV0">
+                                                <rect key="frame" x="66" y="57" width="137" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rp 5.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFM-YS-7zp">
+                                                <rect key="frame" x="66" y="93" width="185" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining Budget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vE0-cN-PhS">
+                                                <rect key="frame" x="66" y="145" width="139" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nPF-bQ-KKJ">
+                                                <rect key="frame" x="66" y="177" width="296" height="4"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="trackTintColor" systemColor="secondaryLabelColor"/>
+                                            </progressView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="fuM-2D-9Qq" firstAttribute="leading" secondItem="iqM-lO-p8T" secondAttribute="leading" constant="70" id="30V-M2-TZ1"/>
@@ -191,9 +178,11 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="l4V-Lr-9fm"/>
                     <navigationItem key="navigationItem" id="YwD-n6-UzB"/>
                     <connections>
+                        <outlet property="addExpensesBtn" destination="5IM-L5-DVq" id="ri2-ER-sUe"/>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
-                        <outlet property="currentTripDashboard" destination="JgO-gv-lHH" id="yR3-7D-HQS"/>
-                        <outlet property="dashboardBg" destination="Knh-ga-0Om" id="eIk-pc-sIU"/>
+                        <outlet property="currentTripDashboard" destination="R6b-R4-vYs" id="Rhs-oG-BO9"/>
+                        <outlet property="dashboardBg" destination="Knh-ga-0Om" id="PtN-NQ-imz"/>
+                        <outlet property="dashboardTableview" destination="gl4-de-8Tw" id="aO6-tT-Y1z"/>
                         <outlet property="mainBg" destination="fuM-2D-9Qq" id="yHW-ku-FNw"/>
                         <outlet property="mainView" destination="iqM-lO-p8T" id="Lye-fy-qdQ"/>
                         <outlet property="openingLabel" destination="FoY-dZ-C3A" id="FZ2-37-fUs"/>
