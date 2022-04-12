@@ -25,6 +25,7 @@
 		D338FDF628001D4500AEA9DA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDF528001D4500AEA9DA /* HistoryViewController.swift */; };
 		D338FDFE2803276100AEA9DA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDFD2803276100AEA9DA /* ItemCell.swift */; };
 		D338FE002803288200AEA9DA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDFF2803288200AEA9DA /* History.swift */; };
+		D338FE022805458200AEA9DA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FE012805458200AEA9DA /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D338FDF528001D4500AEA9DA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		D338FDFD2803276100AEA9DA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D338FDFF2803288200AEA9DA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		D338FE012805458200AEA9DA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				CB1252F227FF2B220060BCD7 /* AddTripViewController.swift */,
 				961B356E28040D1A006B01DD /* CurrentTripViewController.swift */,
 				9642A28F28048765006BEFC4 /* AddExpensesViewController.swift */,
+				D338FE012805458200AEA9DA /* CategoryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				CB1252F327FF2B220060BCD7 /* AddTripViewController.swift in Sources */,
 				965978DB2801E59300A70E21 /* durationCell.swift in Sources */,
 				961B356F28040D1A006B01DD /* CurrentTripViewController.swift in Sources */,
+				D338FE022805458200AEA9DA /* CategoryViewController.swift in Sources */,
 				9642A28E28048715006BEFC4 /* AddExpenseCell.swift in Sources */,
 				D338FE002803288200AEA9DA /* History.swift in Sources */,
 				CB292F7F2803212200039020 /* Expense.swift in Sources */,

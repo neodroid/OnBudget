@@ -9,10 +9,20 @@ import UIKit
 
 class AddExpensesViewController: UIViewController {
 
+    // IBOutlet
+    
+    @IBOutlet weak var category: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
     }
 
+    @IBAction func selectCategory(_ sender: Any) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "category") as? CategoryViewController else {
+            return
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
