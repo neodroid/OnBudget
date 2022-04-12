@@ -21,7 +21,7 @@ class AddExpensesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationItem.title = "Add Expense"
     }
 
     @IBAction func selectCategory(_ sender: Any) {
