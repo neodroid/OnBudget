@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -30,7 +28,7 @@
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgO-gv-lHH">
-                                        <rect key="frame" x="21" y="105" width="360" height="203"/>
+                                        <rect key="frame" x="30" y="121" width="360" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card Trip Page" translatesAutoresizingMaskIntoConstraints="NO" id="SFl-QU-eqA">
@@ -72,7 +70,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Buddy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoY-dZ-C3A">
                                         <rect key="frame" x="30" y="58" width="152" height="39"/>
@@ -113,42 +111,13 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="oNi-kH-MRs"/>
                                         </constraints>
                                     </imageView>
-
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-NX-eBf">
-                                        <rect key="frame" x="34" y="137" width="360" height="196"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination + Date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdY-Fc-f3b">
-                                                <rect key="frame" x="21" y="28" width="137" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remaining Money" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-mO-q5n">
-                                                <rect key="frame" x="21" y="81" width="143" height="34"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-Bp-0RI">
-                                                <rect key="frame" x="21" y="150" width="309" height="4"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </progressView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="separatorColor"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-L5-DVq">
-                                        <rect key="frame" x="34" y="343" width="185" height="47"/>
+                                        <rect key="frame" x="30" y="335" width="185" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="plus.square.fill" catalog="system" title="Add Expenses">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                         </buttonConfiguration>
-                                        <connections>
-                                            <action selector="addExpenses:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCk-0V-pmv"/>
-                                            <action selector="pressAddExpense:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swB-xQ-PQX"/>
-                                        </connections>
-
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -178,11 +147,10 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="l4V-Lr-9fm"/>
                     <navigationItem key="navigationItem" id="YwD-n6-UzB"/>
                     <connections>
-                        <outlet property="addExpensesBtn" destination="5HM-cB-v05" id="SyE-9T-Jz1"/>
+                        <outlet property="addExpensesBtn" destination="5IM-L5-DVq" id="KKV-RD-dgr"/>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
                         <outlet property="currentTripDashboard" destination="JgO-gv-lHH" id="yR3-7D-HQS"/>
                         <outlet property="dashboardBg" destination="Knh-ga-0Om" id="eIk-pc-sIU"/>
-                        <outlet property="dashboardTableview" destination="CMM-fa-zXK" id="zYy-ZU-4Kf"/>
                         <outlet property="mainBg" destination="fuM-2D-9Qq" id="yHW-ku-FNw"/>
                         <outlet property="mainView" destination="iqM-lO-p8T" id="Lye-fy-qdQ"/>
                         <outlet property="openingLabel" destination="FoY-dZ-C3A" id="FZ2-37-fUs"/>
@@ -799,9 +767,6 @@
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
