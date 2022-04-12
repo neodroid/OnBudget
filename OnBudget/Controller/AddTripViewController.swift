@@ -7,13 +7,17 @@
 
 import UIKit
 
+
+
 protocol AddTripViewControllerDelegate: AnyObject {
     func updateMainView()
 }
 
 class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, durationCellProtocol{
     
-    var tripBrain = TripBrain()
+    
+   
+    
     var expensesBrain = ExpensesBrain()
     var duration = ["Starts on","Ends on"]
 
@@ -65,14 +69,13 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.dismiss(animated: true) {
                 NotificationCenter.default.post(name: NSNotification.Name("updateViewMain"), object: nil, userInfo: nil)
             }
-            tripBrain.editName(tripName: titleField.text!)
-            tripBrain.editDestination(tripDestination: destinationField.text!)
+            
             let budgets = Double(budgetField.text!)
-            tripBrain.editBudget(tripBudget: budgets!)
+            
+            tripData.currentTrip[0].name = titleField.text!
+            tripData.currentTrip[0].destination = destinationField.text!
+            tripData.currentTrip[0].budget = budgets
 
-            print(tripBrain.getBudget())
-            print(tripBrain.name!)
-            print(tripBrain.destination!)
 
         }
 
@@ -126,9 +129,11 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     func updateTableSelected(index: Int, dateSelected: String) {
         if index == 0 {
             print("date start clicked at : \(dateSelected)")
+            tripData.currentTrip[0].dateStart = dateSelected
             
         } else {
             print("date end clicked : \(dateSelected)")
+            tripData.currentTrip[0].dateEnd = dateSelected
         }
     }
     
