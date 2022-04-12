@@ -42,9 +42,9 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         titleField.autocorrectionType = .no
         destinationField.autocapitalizationType = .words
         destinationField.autocorrectionType = .no
+        getTodaysDate()
         
-//        budgetField.autocapitalizationType = .words
-//        budgetField.autocorrectionType = .no
+        
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
@@ -137,6 +137,16 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("date end clicked : \(dateSelected)")
             tripData.currentTrip[0].dateEnd = dateSelected
         }
+    }
+    
+    func getTodaysDate() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd,yyyy"
+        let today = dateFormatter.string(from: date)
+        
+        tripData.currentTrip[0].dateStart = today
+        tripData.currentTrip[0].dateEnd = today
     }
     
     
