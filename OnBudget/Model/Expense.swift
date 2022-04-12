@@ -13,7 +13,7 @@ struct Expense {
     var name: String?
     var category: String?
     var value: Double?
-//    var date: Date?
+    var date: String?
     
     init(n: String, c:String, v: Double) {
         name = n
