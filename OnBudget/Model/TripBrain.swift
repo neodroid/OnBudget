@@ -13,6 +13,7 @@ struct TripBrain{
     var name: String?
     var destination: String?
     var budget: Double?
+    var spent: Double?
     
     
     var dateStart: String?

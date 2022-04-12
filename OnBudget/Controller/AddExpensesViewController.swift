@@ -33,21 +33,63 @@ class AddExpensesViewController: UIViewController {
     
     @IBAction func addButtonClicked(_ sender: Any) {
         
+        if checkInput(){
+        
         let datestyle = DateFormatter()
-
         datestyle.timeZone = TimeZone(abbreviation: "GMT+7")
         datestyle.locale = NSLocale.current
-        datestyle.dateFormat = "dd-MMM-yyyy"
-
+        datestyle.dateFormat = "dd/MMM/yyyy"
         let date = datestyle.string(from: dateExpense.date)
         
-        print(titleExpense.text!)
-        let expenseNum = Double(totalExpense.text!)
-        print(date)
         
-        expensesBrain.addExpense(name: titleExpense.text!, category: date, value: expenseNum!)
         
-        print(expensesBrain.expenses)
+            let expenseNum = Double(totalExpense.text!)
+            
+            tripData.expenses.append(Expense(
+                n: titleExpense.text!,
+                c: "test",
+                v: expenseNum!,
+                d: date
+            ))
+        
+       
+            print(tripData.expenses)
+        
+        
+        self.dismiss(animated: true)
+        
+        }
+    }
+    
+    func checkInput() -> Bool {
+
+        let input1Value = titleExpense.text
+        let input2Value = "tes"
+        let input3Value = totalExpense.text
+
+        if !input1Value!.isEmpty && !input2Value.isEmpty && !input3Value!.isEmpty {
+
+            if Double(input3Value!) != nil {
+                return true
+            } else {
+                showDoubleAlert()
+                return false
+            }
+        }
+        showAlert()
+        return false
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Empty Input", message: "Fill all the input to continue", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in print("tapped dismiss")}))
+        present(alert, animated: true)
+        
+    }
+    func showDoubleAlert() {
+        let alert = UIAlertController(title: "Total Expenses", message: "Total Expenses must be a number", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in print("tapped dismiss")}))
+        present(alert, animated: true)
         
     }
     
