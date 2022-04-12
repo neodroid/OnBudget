@@ -45,11 +45,9 @@ class AddExpensesViewController: UIViewController {
         datestyle.locale = NSLocale.current
         datestyle.dateFormat = "dd/MMM/yyyy"
         let date = datestyle.string(from: dateExpense.date)
-        
-        
-        
+
             let expenseNum = Double(totalExpense.text!)
-            
+
             tripData.expenses.append(Expense(
                 n: titleExpense.text!,
                 c: "test",
@@ -58,10 +56,6 @@ class AddExpensesViewController: UIViewController {
             ))
             
             tripData.currentTrip[0].spent! += expenseNum!
-        
-       
-            print(tripData.expenses)
-        
         
             self.dismiss(animated: true) {
                 NotificationCenter.default.post(name: NSNotification.Name("updateViewMain"), object: nil, userInfo: nil)

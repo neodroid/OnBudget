@@ -115,8 +115,9 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card Trip Page" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-FJ-w2d">
                                                 <rect key="frame" x="-76" y="-51" width="580" height="344"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANDUNG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxL-mJ-n0g">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANDUNG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fxL-mJ-n0g">
                                                 <rect key="frame" x="66" y="29" width="300" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="s1T-AX-dVo"/>
                                                     <constraint firstAttribute="width" constant="300" id="xwF-sl-wOO"/>
@@ -125,8 +126,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 - 22 Sept 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-sY-iV0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17 - 22 Sept 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XAF-sY-iV0">
                                                 <rect key="frame" x="66" y="57" width="300" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="5VZ-Lo-Zbs"/>
                                                     <constraint firstAttribute="width" constant="300" id="Hri-2G-iT9"/>
@@ -135,8 +137,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 5.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFM-YS-7zp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 5.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hFM-YS-7zp">
                                                 <rect key="frame" x="66" y="93" width="300" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="40j-fh-fuI"/>
                                                     <constraint firstAttribute="height" constant="36" id="Uy5-DC-XnT"/>
@@ -232,6 +235,7 @@
                     <connections>
                         <outlet property="addExpensesBtn" destination="5IM-L5-DVq" id="ri2-ER-sUe"/>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
+                        <outlet property="budgetProgress" destination="nPF-bQ-KKJ" id="Q5Y-dv-yUP"/>
                         <outlet property="currentTripDashboard" destination="R6b-R4-vYs" id="D3B-Nx-EPJ"/>
                         <outlet property="dashboardBg" destination="Knh-ga-0Om" id="PtN-NQ-imz"/>
                         <outlet property="dashboardTableView" destination="gl4-de-8Tw" id="gVg-Ef-BDp"/>

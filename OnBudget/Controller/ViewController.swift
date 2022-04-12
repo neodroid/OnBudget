@@ -27,6 +27,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     @IBOutlet weak var tripBudget: UILabel!
     @IBOutlet weak var tripTitle: UILabel!
     @IBOutlet weak var dashboardTableView: UITableView!
+    @IBOutlet weak var budgetProgress: UIProgressView!
     
     public var currTripStatus : Bool = false
     
@@ -69,7 +70,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             tripBudget.text = formatDoubleToString(double: remainingBudget)
         }
         if let dateTrip = tripData.currentTrip[0].dateStart {
-            tripDate.text = "\(dateTrip) to \(tripData.currentTrip[0].dateEnd!)"
+            tripDate.text = "from \(dateTrip) to \(tripData.currentTrip[0].dateEnd!)"
         }
     
         if currTripStatus{
@@ -80,6 +81,9 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             currentTripDashboard.isHidden = false
             addExpensesBtn.isHidden = false
             dashboardTableView.isHidden = false
+            
+            let progress = tripData.currentTrip[0].spent!/tripData.currentTrip[0].budget!
+            budgetProgress.setProgress(Float(progress), animated: true)
         }
     }
     
@@ -100,7 +104,6 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     }
     
     @IBAction func selectedTrip(_ sender: Any) {
-        print("centsu ganteng")
         let vc = (storyboard?.instantiateViewController(withIdentifier: "current") as? CurrentTripViewController)!
         
         navigationController?.pushViewController(vc, animated: true)

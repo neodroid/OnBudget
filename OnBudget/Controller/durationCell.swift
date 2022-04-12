@@ -35,7 +35,7 @@ class durationCell: UITableViewCell {
 
         datestyle.timeZone = TimeZone(abbreviation: "GMT+7")
         datestyle.locale = NSLocale.current
-        datestyle.dateFormat = "dd/MMM/yyyy"
+        datestyle.dateFormat = "MMM dd, yyyy"
 
         let date = datestyle.string(from: datePicker.date)
         
