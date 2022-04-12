@@ -73,8 +73,6 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(tripBrain.getBudget())
             print(tripBrain.name!)
             print(tripBrain.destination!)
-            print("your trip \(duration[0])")
-            print("your trip \(duration[1]) \(durationCell().dateSelect((Any).self))")
 
         }
 
