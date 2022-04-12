@@ -73,8 +73,6 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             print(tripBrain.getBudget())
             print(tripBrain.name!)
             print(tripBrain.destination!)
-            print("your trip \(duration[0])")
-            print("your trip \(duration[1]) \(durationCell().dateSelect((Any).self))")
 
         }
 
@@ -128,6 +126,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     func updateTableSelected(index: Int, dateSelected: String) {
         if index == 0 {
             print("date start clicked at : \(dateSelected)")
+            
         } else {
             print("date end clicked : \(dateSelected)")
         }
