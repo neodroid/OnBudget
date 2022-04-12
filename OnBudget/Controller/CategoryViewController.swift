@@ -27,7 +27,9 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDone))
     }
 
+
     @objc func didTapDone(){
+
         
         print(pickCategory!)
     }

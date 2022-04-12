@@ -11,7 +11,9 @@ var tripData = History()
 
 struct History {
     
-    var currentTrip = [TripBrain(currTripStatus: true, name: "Test", destination: "TestDes", budget: 0, dateStart: "", dateEnd: "")]
+    var currentTrip = [TripBrain(currTripStatus: true, name: "Test", destination: "TestDes", budget: 0, spent: 0, dateStart: "", dateEnd: "")]
+    
+    var expenses = [Expense(n: "dummy", c: "dummy", v: 0,d: "dummy")]
     
    var tripHistory =  [
             TripBrain(currTripStatus: false, name: "Jalan-jalan", destination: "Bali", budget: 2000000),

@@ -15,30 +15,12 @@ struct Expense {
     var value: Double?
     var date: String?
     
-    init(n: String, c:String, v: Double) {
+    init(n: String, c:String, v: Double, d: String) {
         name = n
         category = c
         value = v
+        date = d
     }
     
-    //func to edit
-    mutating func editName(expenseName: String) {
-        self.name = expenseName
-    }
-    
-    mutating func editCategory(categoryName: String) {
-        self.category = categoryName
-    }
-    
-    mutating func editValue(valueName: Double) {
-        self.value = valueName
-    }
-    
-//    mutating func editDate(dateName: Date) {
-//        self.date = dateName
-//    }
-    
-    
-    //func to get value
     
 }

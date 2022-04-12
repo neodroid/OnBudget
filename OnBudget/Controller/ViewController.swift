@@ -57,18 +57,16 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     func updateView() {
         // Check if currTripStatus true
         
+
         if let destinationTrip = tripData.currentTrip[0].destination{
             tripTitle.text = "\(destinationTrip)"
+
         }
         if let budgetTrip = tripData.currentTrip[0].budget {
-            let numberFormatter = NumberFormatter()
-            numberFormatter.numberStyle = .decimal
-            numberFormatter.usesGroupingSeparator = true
-            numberFormatter.groupingSeparator = ","
-            numberFormatter.groupingSize = 3
-            let myFormattedDouble = numberFormatter.string(for: budgetTrip)
             
-            tripBudget.text = "Rp. \(myFormattedDouble!)"
+            let remainingBudget = budgetTrip - tripData.currentTrip[0].spent!
+            
+            tripBudget.text = formatDoubleToString(double: remainingBudget)
         }
         if let dateTrip = tripData.currentTrip[0].dateStart {
             tripDate.text = "\(dateTrip) to \(tripData.currentTrip[0].dateEnd!)"
@@ -113,6 +111,17 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             let addVC = segue.destination as? AddTripViewController
             addVC?.delegate = self
         }
+    }
+    
+    func formatDoubleToString(double: Double) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.groupingSize = 3
+        let myFormattedDouble = numberFormatter.string(for: double)
+        
+        return("Rp. \(myFormattedDouble!)")
     }
     
 }

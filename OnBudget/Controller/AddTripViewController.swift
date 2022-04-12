@@ -75,8 +75,10 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             tripData.currentTrip[0].name = titleField.text!
             tripData.currentTrip[0].destination = destinationField.text!
             tripData.currentTrip[0].budget = budgets
-
-
+            
+            
+            //delete dummy soalnya gabisa empty array hehe
+            tripData.expenses.remove(at: 0)
         }
 
     }
@@ -88,7 +90,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         let input3Value = budgetField.text
 
         if !input1Value!.isEmpty && !input2Value!.isEmpty && !input3Value!.isEmpty {
-            
+
             if Double(input3Value!) != nil {
                 return true
             } else {

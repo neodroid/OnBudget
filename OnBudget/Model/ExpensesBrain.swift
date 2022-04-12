@@ -10,11 +10,11 @@ import Foundation
 struct ExpensesBrain {
     
     
-    var expenses = [Expense(n:"test",c:"test",v:0)]
+//    var expenses = [Expense(n:"test",c:"test",v:0)]
     
-    mutating func addExpense(name:String, category:String, value: Double) {
-        expenses.append(Expense(n:name,c:category,v: value))
-    }
+//    mutating func addExpense(name:String, category:String, value: Double) {
+//        expenses.append(Expense(n:name,c:category,v: value))
+//    }
     
     
 }
