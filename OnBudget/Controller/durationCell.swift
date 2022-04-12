@@ -22,5 +22,8 @@ class durationCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-
+    @IBAction func dateSelect(_ sender: Any) {
+        print("date selected")
+    }
+    
 }
