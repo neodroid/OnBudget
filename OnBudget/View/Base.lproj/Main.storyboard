@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fRE-iR-MrJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,38 +26,6 @@
                                 <color key="textColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-L5-DVq">
-                                <rect key="frame" x="36" y="378" width="163" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Add Expenses">
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
-                                    <color key="baseBackgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </buttonConfiguration>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-NX-eBf">
-                                <rect key="frame" x="34" y="174" width="360" height="196"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination + Date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdY-Fc-f3b">
-                                        <rect key="frame" x="21" y="28" width="137" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remaining Money" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-mO-q5n">
-                                        <rect key="frame" x="21" y="81" width="143" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-Bp-0RI">
-                                        <rect key="frame" x="21" y="150" width="309" height="4"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="separatorColor"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9Bi-5p-lKJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,6 +90,41 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="oNi-kH-MRs"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IM-L5-DVq">
+                                        <rect key="frame" x="36" y="341" width="196" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Add Expenses">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <color key="baseBackgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addExpenses:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCk-0V-pmv"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKo-NX-eBf">
+                                        <rect key="frame" x="34" y="137" width="360" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination + Date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdY-Fc-f3b">
+                                                <rect key="frame" x="21" y="28" width="137" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remaining Money" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-mO-q5n">
+                                                <rect key="frame" x="21" y="81" width="143" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zuK-Bp-0RI">
+                                                <rect key="frame" x="21" y="150" width="309" height="4"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </progressView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="fuM-2D-9Qq" firstAttribute="leading" secondItem="iqM-lO-p8T" secondAttribute="leading" constant="70" id="30V-M2-TZ1"/>
@@ -150,7 +153,9 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="house.fill" catalog="system" selectedImage="house.fill" id="l4V-Lr-9fm"/>
                     <navigationItem key="navigationItem" id="YwD-n6-UzB"/>
                     <connections>
+                        <outlet property="addExpensesBtn" destination="5IM-L5-DVq" id="2yZ-Qd-p60"/>
                         <outlet property="addTripBtn" destination="ZW8-Hr-FFg" id="2z7-jX-3cJ"/>
+                        <outlet property="currentTripDashboard" destination="eKo-NX-eBf" id="hza-Nu-ShG"/>
                         <outlet property="dashboardBg" destination="Knh-ga-0Om" id="eIk-pc-sIU"/>
                         <outlet property="mainBg" destination="fuM-2D-9Qq" id="yHW-ku-FNw"/>
                         <outlet property="mainView" destination="iqM-lO-p8T" id="Lye-fy-qdQ"/>
