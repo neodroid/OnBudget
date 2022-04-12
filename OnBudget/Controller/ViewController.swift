@@ -55,8 +55,8 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     func updateView() {
         // Check if currTripStatus true
         
-        if let nameTrip = tripData.currentTrip[0].name {
-            tripTitle.text = nameTrip
+        if let destinationTrip = tripData.currentTrip[0].destination{
+            tripTitle.text = "\(destinationTrip)"
         }
         if let budgetTrip = tripData.currentTrip[0].budget {
             let numberFormatter = NumberFormatter()
