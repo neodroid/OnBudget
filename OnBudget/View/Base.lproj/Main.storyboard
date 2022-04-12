@@ -520,6 +520,7 @@
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="eZx-Oz-XO4"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="budgetField" destination="duY-Te-y1j" id="bGE-9C-twV"/>
                         <outlet property="destinationField" destination="gnC-dS-E9l" id="zQm-me-0u4"/>
                         <outlet property="tableView" destination="MLN-2d-4UQ" id="M1d-HI-4rA"/>
                         <outlet property="titleField" destination="Y4E-kP-uBw" id="9FO-ck-r7R"/>
