@@ -17,6 +17,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var remText: UILabel!
     @IBOutlet weak var remaining: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var calendar: UIDatePicker!
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("expense pressed")
