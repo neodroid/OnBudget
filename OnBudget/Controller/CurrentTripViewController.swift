@@ -9,7 +9,7 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var expenses = [300]
+    
     
     @IBOutlet weak var destinationTxt: UILabel!
     @IBOutlet weak var totalTxt: UILabel!
@@ -31,7 +31,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = (tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? DailyExpensesCell)!
 //        cell.textLabel?.text = expenses[indexPath.row]
         cell.expenseName.text = tripData.expenses[indexPath.row].name
-        cell.expenseAmount.text =  String(tripData.expenses[indexPath.row].value!)
+        cell.expenseAmount.text = formatDoubleToString(double: tripData.expenses[indexPath.row].value!)
         return cell
         
     }
@@ -46,14 +46,9 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     
     func showTotal(){
         
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        numberFormatter.usesGroupingSeparator = true
-        numberFormatter.groupingSeparator = ","
-        numberFormatter.groupingSize = 3
-        let myFormattedDouble = numberFormatter.string(for: tripData.currentTrip[0].budget)
         
-        total.text = "Rp. \(myFormattedDouble!)"
+        let val = tripData.currentTrip[0].budget!
+        total.text = formatDoubleToString(double: val)
         
     }
     
@@ -62,6 +57,11 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func showRem(){
+        
+        let val = tripData.currentTrip[0].budget! - tripData.currentTrip[0].spent!
+        
+        remaining.text = formatDoubleToString(double: val)
+        
         
     }
 
@@ -77,6 +77,17 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         showRemTxt()
         showRem()
  
+    }
+    
+    func formatDoubleToString(double: Double) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.groupingSize = 3
+        let myFormattedDouble = numberFormatter.string(for: double)
+        
+        return("Rp. \(myFormattedDouble!)")
     }
     
 

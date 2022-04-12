@@ -51,12 +51,16 @@ class AddExpensesViewController: UIViewController {
                 v: expenseNum!,
                 d: date
             ))
+            
+            tripData.currentTrip[0].spent! += expenseNum!
         
        
             print(tripData.expenses)
         
         
-        self.dismiss(animated: true)
+            self.dismiss(animated: true) {
+                NotificationCenter.default.post(name: NSNotification.Name("updateViewMain"), object: nil, userInfo: nil)
+            }
         
         }
     }

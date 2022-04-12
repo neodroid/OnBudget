@@ -85,22 +85,21 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func checkInput() -> Bool {
 
-//        let input1Value = titleField.text
-//        let input2Value = destinationField.text
-//        let input3Value = budgetField.text
-//
-//        if !input1Value!.isEmpty && !input2Value!.isEmpty && !input3Value!.isEmpty {
-//
-//            if Double(input3Value!) != nil {
-//                return true
-//            } else {
-//                showDoubleAlert()
-//                return false
-//            }
-//        }
-//        showAlert()
-//        return false
-        return true
+        let input1Value = titleField.text
+        let input2Value = destinationField.text
+        let input3Value = budgetField.text
+
+        if !input1Value!.isEmpty && !input2Value!.isEmpty && !input3Value!.isEmpty {
+
+            if Double(input3Value!) != nil {
+                return true
+            } else {
+                showDoubleAlert()
+                return false
+            }
+        }
+        showAlert()
+        return false
     }
     
     func showAlert() {
