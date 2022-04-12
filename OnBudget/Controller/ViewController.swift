@@ -42,8 +42,8 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     }
     
     @objc func updateMain() {
+        self.currTripStatus = true
         DispatchQueue.main.async {
-            self.currTripStatus = true
             self.updateView()
         }
     }

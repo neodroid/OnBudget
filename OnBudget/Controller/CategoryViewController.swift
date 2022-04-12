@@ -7,12 +7,23 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class CategoryViewController: UIViewController  {
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return duration.count
+//    }
+    
 
+    var duration = ["Starts on","Ends on"]
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+//        tableView.delegate = self
+//        tableView.dataSource = self
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapAdd))
         navigationItem.largeTitleDisplayMode = .never
     }
