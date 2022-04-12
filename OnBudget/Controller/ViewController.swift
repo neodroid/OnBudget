@@ -21,6 +21,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     @IBOutlet weak var currentTripDashboard: UIView!
     @IBOutlet weak var addExpensesBtn: UIButton!
     
+    @IBOutlet weak var dashboardTableView: UITableView!
     
     public var currTripStatus : Bool = false
     
@@ -31,7 +32,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         dashboardBg.isHidden = true
         currentTripDashboard.isHidden = true
         addExpensesBtn.isHidden = true
-        //dashboardTableview.isHidden = true
+        dashboardTableView.isHidden = true
         updateView()
         
     }
@@ -41,8 +42,8 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     }
     
     @objc func updateMain() {
+        self.currTripStatus = true
         DispatchQueue.main.async {
-            self.currTripStatus = true
             self.updateView()
         }
     }
@@ -56,7 +57,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             dashboardBg.isHidden = false
             currentTripDashboard.isHidden = false
             addExpensesBtn.isHidden = false
-            //dashboardTableview.isHidden = false
+            dashboardTableView.isHidden = false
             
         }
     }

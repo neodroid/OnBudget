@@ -126,6 +126,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     func updateTableSelected(index: Int, dateSelected: String) {
         if index == 0 {
             print("date start clicked at : \(dateSelected)")
+            
         } else {
             print("date end clicked : \(dateSelected)")
         }
