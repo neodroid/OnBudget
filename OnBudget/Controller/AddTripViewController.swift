@@ -84,7 +84,6 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
                                                             
     @objc func didTapAdd (){
-        
         self.dismiss(animated: true) {
             NotificationCenter.default.post(name: NSNotification.Name("updateViewMain"), object: nil, userInfo: nil)
         }

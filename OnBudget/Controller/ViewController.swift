@@ -13,7 +13,6 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         
     }
     
-
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var openingLabel: UILabel!
     @IBOutlet weak var mainBg: UIImageView!
