@@ -13,7 +13,9 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         
     }
     
+
     @IBOutlet weak var tripDate: UILabel!
+
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var openingLabel: UILabel!
     @IBOutlet weak var mainBg: UIImageView!
@@ -32,7 +34,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationItem.largeTitleDisplayMode = .never
         dashboardBg.isHidden = true
         currentTripDashboard.isHidden = true
         addExpensesBtn.isHidden = true
@@ -103,14 +105,21 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
 //        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
     
+
+    
+    @IBAction func selectedTrip(_ sender: Any) {
+        print("centsu ganteng")
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "current") as? CurrentTripViewController)!
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             let addVC = segue.destination as? AddTripViewController
             addVC?.delegate = self
         }
     }
-    
-    
     
 }
 
