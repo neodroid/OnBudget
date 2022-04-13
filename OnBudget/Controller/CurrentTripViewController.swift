@@ -9,7 +9,7 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var expenses = [300]
+    
     
     @IBOutlet weak var destinationTxt: UILabel!
     @IBOutlet weak var totalTxt: UILabel!
@@ -25,19 +25,21 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return expenses.count
+        return tripData.expenses.count
+
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? DailyExpensesCell)!
 //        cell.textLabel?.text = expenses[indexPath.row]
-        cell.expenseName.text = "Nasi Goreng Kebuli"
-        cell.expenseAmount.text = "2000000"
+        cell.expenseName.text = tripData.expenses[indexPath.row].name
+        cell.expenseAmount.text = formatDoubleToString(double: tripData.expenses[indexPath.row].value!)
         return cell
+        
     }
     
     func showDestination(){
-        
+        destinationTxt.text = tripData.currentTrip[0].destination
     }
     
     func showTotalTxt() {
@@ -45,6 +47,10 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func showTotal(){
+        
+        
+        let val = tripData.currentTrip[0].budget!
+        total.text = formatDoubleToString(double: val)
         
     }
     
@@ -54,6 +60,11 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     
     func showRem(){
         
+        let val = tripData.currentTrip[0].budget! - tripData.currentTrip[0].spent!
+        
+        remaining.text = formatDoubleToString(double: val)
+        
+        
     }
 
     override func viewDidLoad() {
@@ -61,6 +72,13 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+
+        let addButton   = UIBarButtonItem(image: UIImage(systemName: "plus"),  style: .plain, target: self, action: #selector(didTapAdd))
+        let moreButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),  style: .plain, target: self, action: #selector(didTapMore))
+        
+        navigationItem.rightBarButtonItems = [moreButton, addButton]
+        
         
         showDestination()
         showTotalTxt()
@@ -70,5 +88,32 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
  
     }
     
+
+    func formatDoubleToString(double: Double) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.groupingSize = 3
+        let myFormattedDouble = numberFormatter.string(for: double)
+        
+        return("Rp. \(myFormattedDouble!)")
+    }
+    
+
+    @objc func didTapAdd(){
+        let addExpenseVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddExpensesViewController")
+        if let sheet = addExpenseVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        self.present(addExpenseVC, animated: true, completion: nil)
+    }
+    
+    @objc func didTapMore(){
+        //d
+    }
+
 
 }

@@ -7,13 +7,17 @@
 
 import UIKit
 
+
+
 protocol AddTripViewControllerDelegate: AnyObject {
     func updateMainView()
 }
 
 class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, durationCellProtocol{
     
-    var tripBrain = TripBrain()
+    
+   
+    
     var expensesBrain = ExpensesBrain()
     var duration = ["Starts on","Ends on"]
 
@@ -38,9 +42,9 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         titleField.autocorrectionType = .no
         destinationField.autocapitalizationType = .words
         destinationField.autocorrectionType = .no
+        getTodaysDate()
         
-//        budgetField.autocapitalizationType = .words
-//        budgetField.autocorrectionType = .no
+        
 
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
@@ -65,15 +69,16 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.dismiss(animated: true) {
                 NotificationCenter.default.post(name: NSNotification.Name("updateViewMain"), object: nil, userInfo: nil)
             }
-            tripBrain.editName(tripName: titleField.text!)
-            tripBrain.editDestination(tripDestination: destinationField.text!)
+            
             let budgets = Double(budgetField.text!)
-            tripBrain.editBudget(tripBudget: budgets!)
-
-            print(tripBrain.getBudget())
-            print(tripBrain.name!)
-            print(tripBrain.destination!)
-
+            
+            tripData.currentTrip[0].name = titleField.text!
+            tripData.currentTrip[0].destination = destinationField.text!
+            tripData.currentTrip[0].budget = budgets
+            
+            
+            //delete dummy soalnya gabisa empty array hehe
+            tripData.expenses.remove(at: 0)
         }
 
     }
@@ -85,7 +90,7 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
         let input3Value = budgetField.text
 
         if !input1Value!.isEmpty && !input2Value!.isEmpty && !input3Value!.isEmpty {
-            
+
             if Double(input3Value!) != nil {
                 return true
             } else {
@@ -126,10 +131,22 @@ class AddTripViewController: UIViewController, UITableViewDelegate, UITableViewD
     func updateTableSelected(index: Int, dateSelected: String) {
         if index == 0 {
             print("date start clicked at : \(dateSelected)")
+            tripData.currentTrip[0].dateStart = dateSelected
             
         } else {
             print("date end clicked : \(dateSelected)")
+            tripData.currentTrip[0].dateEnd = dateSelected
         }
+    }
+    
+    func getTodaysDate() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd,yyyy"
+        let today = dateFormatter.string(from: date)
+        
+        tripData.currentTrip[0].dateStart = today
+        tripData.currentTrip[0].dateEnd = today
     }
     
     

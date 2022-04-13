@@ -13,8 +13,9 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         
     }
     
-    public var centsu = 0
-    
+
+    @IBOutlet weak var tripDate: UILabel!
+
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var openingLabel: UILabel!
     @IBOutlet weak var mainBg: UIImageView!
@@ -23,10 +24,14 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     @IBOutlet weak var currentTripDashboard: UIView!
     @IBOutlet weak var addExpensesBtn: UIButton!
     
+    @IBOutlet weak var tripBudget: UILabel!
+    @IBOutlet weak var tripTitle: UILabel!
     @IBOutlet weak var dashboardTableView: UITableView!
+    @IBOutlet weak var budgetProgress: UIProgressView!
     
     public var currTripStatus : Bool = false
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -52,6 +57,22 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     
     func updateView() {
         // Check if currTripStatus true
+        
+
+        if let destinationTrip = tripData.currentTrip[0].destination{
+            tripTitle.text = "\(destinationTrip)"
+
+        }
+        if let budgetTrip = tripData.currentTrip[0].budget {
+            
+            let remainingBudget = budgetTrip - tripData.currentTrip[0].spent!
+            
+            tripBudget.text = formatDoubleToString(double: remainingBudget)
+        }
+        if let dateTrip = tripData.currentTrip[0].dateStart {
+            tripDate.text = "from \(dateTrip) to \(tripData.currentTrip[0].dateEnd!)"
+        }
+    
         if currTripStatus{
             mainBg.isHidden = true
             addTripBtn.isHidden = true
@@ -61,37 +82,49 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             addExpensesBtn.isHidden = false
             dashboardTableView.isHidden = false
             
+            let progress = tripData.currentTrip[0].spent!/tripData.currentTrip[0].budget!
+            budgetProgress.setProgress(Float(progress), animated: true)
         }
     }
     
-
-    func changeBgColor(){
-        let gradient = CAGradientLayer()
+    @IBAction func pressAddExpense(_ sender: Any) {
+        let addExpenseVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AddExpensesViewController")
+        if let sheet = addExpenseVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+        }
         
-        gradient.frame = mainView.bounds
-        gradient.colors = [UIColor.white.cgColor, UIColor(red: 0.83, green: 0.87, blue: 1.00, alpha: 1.00).cgColor]
-        
-        mainView.layer.insertSublayer(gradient, at: 0)
+        self.present(addExpenseVC, animated: true, completion: nil)
     }
     
     @IBAction func pressAddTrip(_ sender: Any) {
         print("added trip")
+        print(tripData.currentTrip.count)
 //        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
     
-    
     @IBAction func selectedTrip(_ sender: Any) {
-        print("centsu ganteng")
         let vc = (storyboard?.instantiateViewController(withIdentifier: "current") as? CurrentTripViewController)!
         
         navigationController?.pushViewController(vc, animated: true)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             let addVC = segue.destination as? AddTripViewController
             addVC?.delegate = self
         }
+    }
+    
+    func formatDoubleToString(double: Double) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.groupingSize = 3
+        let myFormattedDouble = numberFormatter.string(for: double)
+        
+        return("Rp. \(myFormattedDouble!)")
     }
     
 }
