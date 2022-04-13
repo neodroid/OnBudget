@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-Rl-MFm">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -137,11 +137,10 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 5.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hFM-YS-7zp">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rp 5.000.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hFM-YS-7zp">
                                                 <rect key="frame" x="66" y="93" width="300" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="40j-fh-fuI"/>
                                                     <constraint firstAttribute="height" constant="36" id="Uy5-DC-XnT"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -173,7 +172,6 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="P6o-FJ-w2d" secondAttribute="trailing" constant="-76" id="1Fg-Ig-KDg"/>
-                                            <constraint firstAttribute="trailing" secondItem="fxL-mJ-n0g" secondAttribute="trailing" constant="237" id="4BA-0b-JMa"/>
                                             <constraint firstItem="vE0-cN-PhS" firstAttribute="leading" secondItem="R6b-R4-vYs" secondAttribute="leading" constant="66" id="71s-nJ-BVx"/>
                                             <constraint firstItem="fxL-mJ-n0g" firstAttribute="leading" secondItem="R6b-R4-vYs" secondAttribute="leading" constant="66" id="A4J-nI-QIj"/>
                                             <constraint firstAttribute="bottom" secondItem="P6o-FJ-w2d" secondAttribute="bottom" constant="-64" id="Dkd-vO-2GM"/>
@@ -436,6 +434,9 @@
                                             <constraint firstAttribute="width" constant="388" id="1Dz-Gz-FtW"/>
                                             <constraint firstAttribute="height" constant="361.32999999999998" id="mph-hg-Hzy"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="dateSelect:" destination="073-Zu-mmS" eventType="valueChanged" id="WJC-HD-B5q"/>
+                                        </connections>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCs-Db-o2q">
                                         <rect key="frame" x="8" y="0.0" width="372" height="48"/>
