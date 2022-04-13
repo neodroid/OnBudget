@@ -7,9 +7,9 @@
 
 import UIKit
 
-var pickCategory: String = ""
-
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var pickCategory: String = ""
 
     var cat = ["🍔 Foods & Drinks", "🚕 Transportation", "🏠 Hotel", "💳 Top up", "🎳 Activity ", "🔍 Others" ]
     
@@ -33,6 +33,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         if checkInput(){
             print(pickCategory)
             performSegue(withIdentifier: "unwindToCategory", sender: self)
+            
         }
     }
 
