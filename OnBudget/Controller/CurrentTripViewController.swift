@@ -19,6 +19,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     
     var todaysData = [Expense]()
     var currentDate = ""
+    var cat = ["🍔 Foods & Drinks": "🍔", "🚕 Transportation": "🚕", "🏠 Hotel": "🏠", "💳 Top up": "💳", "🎳 Activity ": "🎳", "🔍 Others" : "🔍"]
     
     func buildData() {
         todaysData.removeAll()
@@ -42,7 +43,8 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? DailyExpensesCell)!
 //        cell.textLabel?.text = expenses[indexPath.row]
-        cell.expenseName.text = todaysData[indexPath.row].name
+        let logo = cat[todaysData[indexPath.row].category!]
+        cell.expenseName.text = "\(logo!)  \(todaysData[indexPath.row].name!)"
         cell.expenseAmount.text = formatDoubleToString(double: todaysData[indexPath.row].value!)
         return cell
         
@@ -119,6 +121,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
         self.present(addExpenseVC, animated: true, completion: nil)
+        print("yes done")
     }
     
     @objc func didTapMore(){
