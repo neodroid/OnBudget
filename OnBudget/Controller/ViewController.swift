@@ -48,13 +48,13 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         addExpensesBtn.isHidden = true
         dashboardTableView.isHidden = true
         updateView()
+        print("asdasd")
         dashboardTableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(updateMain), name: Notification.Name("updateViewMain"), object: nil)
-        
     }
     
     @objc func updateMain() {
@@ -87,7 +87,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             dashboardBg.isHidden = false
             currentTripDashboard.isHidden = false
             addExpensesBtn.isHidden = false
-            dashboardTableView.isHidden = false
+            dashboardTableView.isHidden = true
             
             let progress = tripData.currentTrip[0].spent!/tripData.currentTrip[0].budget!
             budgetProgress.setProgress(Float(progress), animated: true)

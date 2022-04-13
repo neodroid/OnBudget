@@ -13,6 +13,8 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
 
     var cat = ["🍔 Foods & Drinks", "🚕 Transportation", "🏠 Hotel", "💳 Top up", "🎳 Activity ", "🔍 Others" ]
     
+    var selectedIndexes = [[IndexPath.init(row: 0, section: 0)], [IndexPath.init(row: 0, section: 1)]]
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -44,13 +46,43 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "CategoryCellID", for: indexPath) as? CategoryCell)!
         cell.categoryLabel.text = cat[indexPath.row]
+        cell.selectionStyle = .none
         
+        let selectedSectionIndexes = self.selectedIndexes[indexPath.section]
+        if pickCategory != "" {
+
+            if selectedSectionIndexes.contains(indexPath) {
+                cell.accessoryType = .checkmark
+            }
+            else {
+                cell.accessoryType = .none
+            }
+        }
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let position = indexPath.row
         pickCategory = cat[position]
+        
+        let cell = tableView.cellForRow(at: indexPath)
+
+        // If current cell is not present in selectedIndexes
+        if !self.selectedIndexes[indexPath.section].contains(indexPath) {
+        
+            // mark it checked
+            cell?.accessoryType = .checkmark
+                
+            // Remove any previous selected indexpath
+            self.selectedIndexes[indexPath.section].removeAll()
+                
+            // add currently selected indexpath
+            self.selectedIndexes[indexPath.section].append(indexPath)
+
+            tableView.reloadData()
+        }
+        
     }
     
     func checkInput() -> Bool {
