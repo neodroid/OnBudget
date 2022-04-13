@@ -17,7 +17,17 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendar: UIDatePicker!
     
+    var todaysData = [Expense]()
+    var currentDate = ""
     
+    func buildData() {
+        todaysData.removeAll()
+        for expenseData in tripData.expenses {
+            if expenseData.date == currentDate{
+                todaysData.append(expenseData)
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("expense pressed")
@@ -25,15 +35,15 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return tripData.expenses.count
+        return todaysData.count
 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath) as? DailyExpensesCell)!
 //        cell.textLabel?.text = expenses[indexPath.row]
-        cell.expenseName.text = tripData.expenses[indexPath.row].name
-        cell.expenseAmount.text = formatDoubleToString(double: tripData.expenses[indexPath.row].value!)
+        cell.expenseName.text = todaysData[indexPath.row].name
+        cell.expenseAmount.text = formatDoubleToString(double: todaysData[indexPath.row].value!)
         return cell
         
     }
@@ -68,6 +78,8 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getTodaysDate()
+        buildData()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -122,14 +134,23 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     @IBAction func dateSelect(_ sender: Any) {
         
         let datestyle = DateFormatter()
-
         datestyle.timeZone = TimeZone(abbreviation: "GMT+7")
         datestyle.locale = NSLocale.current
         datestyle.dateFormat = "MMM dd, yyyy"
-
         let date = datestyle.string(from: calendar.date)
+        currentDate = date
+        buildData()
+        self.tableView.reloadData()
         
-        print(date)
+    }
+    
+    func getTodaysDate() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        let today = dateFormatter.string(from: date)
+        
+        currentDate = today
         
     }
 

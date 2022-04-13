@@ -43,7 +43,7 @@ class AddExpensesViewController: UIViewController {
         let datestyle = DateFormatter()
         datestyle.timeZone = TimeZone(abbreviation: "GMT+7")
         datestyle.locale = NSLocale.current
-        datestyle.dateFormat = "dd/MMM/yyyy"
+        datestyle.dateFormat = "MMM dd, yyyy"
         let date = datestyle.string(from: dateExpense.date)
 
             let expenseNum = Double(totalExpense.text!)
