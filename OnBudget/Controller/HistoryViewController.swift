@@ -35,7 +35,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
             cell?.date.text = "(\(selectedTrip.dateStart!) to \(selectedTrip.dateEnd!))"
             cell?.destination.text = selectedTrip.destination
             cell?.expense.text = formatDoubleToString(double: selectedTrip.spent!)
-            cell?.budget.text = "dari \(formatDoubleToString(double: selectedTrip.budget!))"
+            cell?.budget.text = "from \(formatDoubleToString(double: selectedTrip.budget!))"
         }
         
         cell?.backgroundColor = .lightGray
