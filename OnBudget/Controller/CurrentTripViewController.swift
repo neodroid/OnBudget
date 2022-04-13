@@ -9,8 +9,6 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     @IBOutlet weak var destinationTxt: UILabel!
     @IBOutlet weak var totalTxt: UILabel!
     @IBOutlet weak var total: UILabel!
@@ -113,6 +111,20 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     
     @objc func didTapMore(){
         //d
+    }
+    
+    @IBAction func dateSelect(_ sender: Any) {
+        
+        let datestyle = DateFormatter()
+
+        datestyle.timeZone = TimeZone(abbreviation: "GMT+7")
+        datestyle.locale = NSLocale.current
+        datestyle.dateFormat = "MMM dd, yyyy"
+
+        let date = datestyle.string(from: calendar.date)
+        
+        print(date)
+        
     }
 
 
