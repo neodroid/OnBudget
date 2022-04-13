@@ -50,5 +50,7 @@ class MoreViewController: UIViewController {
         dismiss(animated: true)
         tripData.currentTrip[0].currTripStatus = false
         isThereAnyTrip = false
+        print(tripData.currentTrip[0].currTripStatus)
+        print(isThereAnyTrip)
     }
 }
