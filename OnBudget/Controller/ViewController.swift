@@ -31,7 +31,10 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     
     public var currTripStatus : Bool = false
     
-
+    //dashboardTableView
+    let categoryDash = ["🍔 Foods & Drinks", "🚕 Transportation", "🏠 Hotel", "💳 Top up", "🎳 Activity ", "🔍 Others" ]
+    let sumPrice = [0,0,0,0,0,0]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,11 +44,13 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         addExpensesBtn.isHidden = true
         dashboardTableView.isHidden = true
         updateView()
-        
+        dashboardTableView.dataSource = self
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(updateMain), name: Notification.Name("updateViewMain"), object: nil)
+        
     }
     
     @objc func updateMain() {
@@ -127,5 +132,19 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         return("Rp. \(myFormattedDouble!)")
     }
     
+    
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categoryDash.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+        cell.textLabel?.text = categoryDash[indexPath.row]
+        cell.detailTextLabel?.text = "Rp\(sumPrice[indexPath.row])"
+        return cell
+    
+    }
+}
