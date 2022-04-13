@@ -47,6 +47,8 @@ class MoreViewController: UIViewController {
     }
     
     func onClick(){
-        
+        dismiss(animated: true)
+        tripData.currentTrip[0].currTripStatus = false
+        isThereAnyTrip = false
     }
 }

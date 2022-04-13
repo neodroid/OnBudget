@@ -7,6 +7,7 @@
 
 import Foundation
 
+var isThereAnyTrip : Bool = false
 var tripData = History()
 
 struct History {

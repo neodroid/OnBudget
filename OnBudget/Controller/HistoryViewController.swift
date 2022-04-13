@@ -34,16 +34,25 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
             cell?.title.text = "\(selectedTrip.name!)"
             cell?.date.text = "(\(selectedTrip.dateStart!) to \(selectedTrip.dateEnd!))"
             cell?.destination.text = selectedTrip.destination
-            cell?.expense.text = "Rp\(selectedTrip.spent!)"
-            cell?.budget.text = "dari Rp\(selectedTrip.budget!)"
+            cell?.expense.text = formatDoubleToString(double: selectedTrip.spent!)
+            cell?.budget.text = "dari \(formatDoubleToString(double: selectedTrip.budget!))"
         }
         
         cell?.backgroundColor = .lightGray
+        cell?.layer.cornerRadius = 20
         
         return cell!
     }
     
-    
-    
+    func formatDoubleToString(double: Double) -> String{
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.usesGroupingSeparator = true
+        numberFormatter.groupingSeparator = "."
+        numberFormatter.groupingSize = 3
+        let myFormattedDouble = numberFormatter.string(for: double)
+        
+        return("Rp. \(myFormattedDouble!)")
+    }
     
 }

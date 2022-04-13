@@ -9,6 +9,7 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var destinationTxt: UILabel!
     @IBOutlet weak var totalTxt: UILabel!
     @IBOutlet weak var total: UILabel!
@@ -82,6 +83,11 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         getTodaysDate()
         buildData()
+        
+        mainView.layer.shadowColor = UIColor.lightGray.cgColor
+        mainView.layer.shadowOpacity = 3
+        mainView.layer.shadowOffset = .zero
+        mainView.layer.shadowRadius = 10
         
         tableView.delegate = self
         tableView.dataSource = self
