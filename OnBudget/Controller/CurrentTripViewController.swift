@@ -17,6 +17,8 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var calendar: UIDatePicker!
     
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("expense pressed")
     }
@@ -46,8 +48,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     
     func showTotal(){
         
-        
-        let val = tripData.currentTrip[0].budget!
+        let val = tripData.currentTrip[0].spent!
         total.text = formatDoubleToString(double: val)
         
     }
@@ -70,7 +71,6 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         
         tableView.delegate = self
         tableView.dataSource = self
-        
 
         let addButton   = UIBarButtonItem(image: UIImage(systemName: "plus"),  style: .plain, target: self, action: #selector(didTapAdd))
         let moreButton = UIBarButtonItem(image: UIImage(systemName: "ellipsis.circle"),  style: .plain, target: self, action: #selector(didTapMore))
@@ -110,7 +110,13 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @objc func didTapMore(){
-        //d
+        let moreVC =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "more")
+        if let sheet = moreVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.preferredCornerRadius = 24
+        }
+        
+        self.present(moreVC, animated: true, completion: nil)
     }
     
     @IBAction func dateSelect(_ sender: Any) {
