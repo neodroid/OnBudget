@@ -39,6 +39,10 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.largeTitleDisplayMode = .never
+        currentTripDashboard.layer.shadowColor = UIColor.lightGray.cgColor
+        currentTripDashboard.layer.shadowOpacity = 1
+        currentTripDashboard.layer.shadowOffset = .zero
+        currentTripDashboard.layer.shadowRadius = 10
         dashboardBg.isHidden = true
         currentTripDashboard.isHidden = true
         addExpensesBtn.isHidden = true
@@ -55,18 +59,16 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
     
     @objc func updateMain() {
         self.currTripStatus = true
+        isThereAnyTrip = true
         DispatchQueue.main.async {
             self.updateView()
         }
     }
     
     func updateView() {
-        // Check if currTripStatus true
-        
 
         if let destinationTrip = tripData.currentTrip[0].destination{
             tripTitle.text = "\(destinationTrip)"
-
         }
         if let budgetTrip = tripData.currentTrip[0].budget {
             
@@ -78,7 +80,7 @@ class ViewController: UIViewController, AddTripViewControllerDelegate {
             tripDate.text = "from \(dateTrip) to \(tripData.currentTrip[0].dateEnd!)"
         }
     
-        if currTripStatus{
+        if isThereAnyTrip{
             mainBg.isHidden = true
             addTripBtn.isHidden = true
             //changeBgColor()
