@@ -9,9 +9,6 @@ import UIKit
 
 class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    weak var delegate: durationCellProtocol?
-    var currentIndex = 0
-    
     @IBOutlet weak var destinationTxt: UILabel!
     @IBOutlet weak var totalTxt: UILabel!
     @IBOutlet weak var total: UILabel!
@@ -126,7 +123,7 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
 
         let date = datestyle.string(from: calendar.date)
         
-        self.delegate?.updateTableSelected(index: currentIndex, dateSelected: date)
+        print(date)
         
     }
 
