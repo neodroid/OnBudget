@@ -7,7 +7,7 @@
 
 import UIKit
 
-var pickCategory: String?
+var pickCategory: String = ""
 
 class CategoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -30,8 +30,10 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
 
     @objc func didTapDone(){
 
-        
-        print(pickCategory!)
+        if checkInput(){
+            print(pickCategory)
+            performSegue(withIdentifier: "unwindToCategory", sender: self)
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +50,23 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let position = indexPath.row
         pickCategory = cat[position]
+    }
+    
+    func checkInput() -> Bool {
+
+//        let category = pickCategory
+        if pickCategory == "" {
+            showAlert()
+            return false
+        }
+        return true
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "No Category Selected", message: "Select a category to continue", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in print("tapped dismiss")}))
+        present(alert, animated: true)
+        
     }
 
     /*
