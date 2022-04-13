@@ -28,6 +28,7 @@
 		D338FE002803288200AEA9DA /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FDFF2803288200AEA9DA /* History.swift */; };
 		D338FE022805458200AEA9DA /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FE012805458200AEA9DA /* CategoryViewController.swift */; };
 		D338FE042805737E00AEA9DA /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FE032805737E00AEA9DA /* CategoryCell.swift */; };
+		D338FE2A2806996600AEA9DA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338FE292806996600AEA9DA /* MoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D338FDFF2803288200AEA9DA /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		D338FE012805458200AEA9DA /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		D338FE032805737E00AEA9DA /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		D338FE292806996600AEA9DA /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				961B356E28040D1A006B01DD /* CurrentTripViewController.swift */,
 				9642A28F28048765006BEFC4 /* AddExpensesViewController.swift */,
 				D338FE012805458200AEA9DA /* CategoryViewController.swift */,
+				D338FE292806996600AEA9DA /* MoreViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				CB292F7F2803212200039020 /* Expense.swift in Sources */,
 				9642A29028048765006BEFC4 /* AddExpensesViewController.swift in Sources */,
 				D338FDFE2803276100AEA9DA /* ItemCell.swift in Sources */,
+				D338FE2A2806996600AEA9DA /* MoreViewController.swift in Sources */,
 				96C06C272805666B00C0C639 /* DailyExpensesCell.swift in Sources */,
 				CBA0552427FC33B500D25C95 /* ViewController.swift in Sources */,
 				CBA0552027FC33B500D25C95 /* AppDelegate.swift in Sources */,

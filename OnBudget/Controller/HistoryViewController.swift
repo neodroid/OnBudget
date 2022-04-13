@@ -31,9 +31,10 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         
         if trip.currTripStatus == false {
             let selectedTrip = trip.self
-            cell?.title.text = "\(selectedTrip.name!) (\(selectedTrip.destination!))"
+            cell?.title.text = "\(selectedTrip.name!)"
+            cell?.date.text = "(\(selectedTrip.dateStart!) to \(selectedTrip.dateEnd!))"
             cell?.destination.text = selectedTrip.destination
-            cell?.expense.text = "Rp2.000.000"
+            cell?.expense.text = "Rp\(selectedTrip.spent!)"
             cell?.budget.text = "dari Rp\(selectedTrip.budget!)"
         }
         

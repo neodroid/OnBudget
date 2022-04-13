@@ -11,6 +11,7 @@ class ItemCell: UICollectionViewCell {
     
     @IBOutlet weak var destination: UILabel!
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var date: UILabel!
     
     @IBOutlet weak var expense: UILabel!
     @IBOutlet weak var budget: UILabel!
