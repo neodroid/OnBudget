@@ -153,6 +153,4 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         currentDate = today
         
     }
-
-
 }
