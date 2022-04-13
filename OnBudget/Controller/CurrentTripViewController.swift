@@ -84,11 +84,6 @@ class CurrentTripViewController: UIViewController, UITableViewDelegate, UITableV
         getTodaysDate()
         buildData()
         
-        mainView.layer.shadowColor = UIColor.lightGray.cgColor
-        mainView.layer.shadowOpacity = 3
-        mainView.layer.shadowOffset = .zero
-        mainView.layer.shadowRadius = 10
-        
         tableView.delegate = self
         tableView.dataSource = self
 
