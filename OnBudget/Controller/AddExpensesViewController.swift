@@ -16,6 +16,7 @@ class AddExpensesViewController: UIViewController {
     @IBOutlet weak var dateExpense: UIDatePicker!
     
     var expensesBrain = ExpensesBrain()
+    var selectedCategory : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,7 @@ class AddExpensesViewController: UIViewController {
 
             tripData.expenses.append(Expense(
                 n: titleExpense.text!,
-                c: "test",
+                c: selectedCategory,
                 v: expenseNum!,
                 d: date
             ))
@@ -73,7 +74,14 @@ class AddExpensesViewController: UIViewController {
         if !input1Value!.isEmpty && !input2Value.isEmpty && !input3Value!.isEmpty {
 
             if Double(input3Value!) != nil {
-                return true
+                if selectedCategory != "" {
+                    return true
+                }
+                else{
+                    showCatAlert()
+                    return false
+                }
+                
             } else {
                 showDoubleAlert()
                 return false
@@ -93,11 +101,21 @@ class AddExpensesViewController: UIViewController {
         let alert = UIAlertController(title: "Total Expenses", message: "Total Expenses must be a number", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in print("tapped dismiss")}))
         present(alert, animated: true)
-        
+    }
+    
+    func showCatAlert(){
+        let alert = UIAlertController(title: "No Category Selected", message: "Select a category to continue", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: {action in print("tapped dismiss")}))
+        present(alert, animated: true)
     }
     
     @IBAction func unwind( _ seg: UIStoryboardSegue) {
-        
+        if let vc = seg.source as? CategoryViewController {
+            category.setTitle(vc.pickCategory, for: .normal)
+            print(vc.pickCategory)
+            selectedCategory = vc.pickCategory
+        }
     }
+    
     
 }
