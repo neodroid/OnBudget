@@ -873,13 +873,6 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a0P-Ed-2OV">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ease your trip budgeting in your fingertrips in your fingertips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I54-kN-sKt">
-                                        <rect key="frame" x="49" y="551" width="330" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OnBudget" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrn-bu-gRC">
                                         <rect key="frame" x="106" y="487" width="217" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -891,6 +884,13 @@
                                         <rect key="frame" x="90" y="248" width="249" height="215"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ease of trip budgeting at your fingertips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I54-kN-sKt">
+                                        <rect key="frame" x="44" y="550" width="340" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.37647058820000001" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
@@ -909,7 +909,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYy-Kz-MnE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="-717"/>
+            <point key="canvasLocation" x="-702.3364485981308" y="-717.27861771058315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mXI-Ed-KUU">
